@@ -37,7 +37,7 @@ danio = spark.read.parquet("./data/danio_protein.adam")
 mysz = spark.read.parquet("./data/mysz_protein.adam")
 
 SEED = 30
-DESIRED_SAMPLE_SIZE = 100
+DESIRED_SAMPLE_SIZE = 10000
 SAMPLING_MARGIN = 0.00005
 
 # Obliczamy frakcje potrzebne do pobrania próbek
