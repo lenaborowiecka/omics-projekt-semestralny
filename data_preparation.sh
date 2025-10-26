@@ -46,7 +46,7 @@ mkdir -p overlay
 # 6. Enter Apptainer container and Convert FASTA to ADAM format
 # -------------------------------
 echo "Entering Apptainer container..."
-apptainer shell --overlay overlay docker://quay.io/biocontainers/adam:1.0.1--hdfd78af_0 << 'EOF'
+install-dir/bin/apptainer shell --overlay overlay docker://quay.io/biocontainers/adam:1.0.1--hdfd78af_0 << 'EOF'
 
 echo "Transforming protein FASTA to ADAM..."
 adam-submit transformAlignments mysz_protein.fa mysz_protein.adam
