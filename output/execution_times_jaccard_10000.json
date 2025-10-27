@@ -1,0 +1,10 @@
+{
+    "krok_1_wczytanie_i_probkowanie": 7.99,
+    "krok_2_ekstrakcja_sekwencji": 0.11,
+    "krok_3_generowanie_trojpeptydow": 0.15,
+    "krok_4_polaczenie_krzyzowe_i_filtrowanie": 0.11,
+    "krok_5_obliczenie_jaccarda": 0.42,
+    "krok_6_rangowanie_i_wybor": 2972.8,
+    "krok_7_zapisanie_wynikow": 2967.93,
+    "calkowity_czas_wykonania_sekundy": 5949.49
+}

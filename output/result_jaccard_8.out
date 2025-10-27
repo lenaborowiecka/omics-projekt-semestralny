@@ -1,0 +1,31 @@
+==========================================
+SLURM_JOB_ID = 8398800
+SLURM_JOB_NODELIST = t1-3
+==========================================
+********** 10 Najlepszych Dokładnych Dopasowań Białek Jaccarda **********
++--------------+--------------+------------------+
+|mouse_ref     |fish_ref      |jaccard_similarity|
++--------------+--------------+------------------+
+|XP_002666951.1|NP_835734.2   |1.0               |
+|XP_009301181.3|NP_783583.1   |1.0               |
+|XP_073799541.1|NP_783583.1   |1.0               |
+|NP_957037.1   |NP_035673.3   |0.9617834394904459|
+|NP_955815.1   |NP_033198.1   |0.8783783783783784|
+|XP_068080740.1|XP_006507398.1|0.8763440860215054|
+|NP_957395.1   |NP_835734.2   |0.875             |
+|XP_005156472.1|XP_006507398.1|0.8671454219030521|
+|NP_958889.1   |NP_033529.3   |0.8609271523178808|
+|NP_942104.2   |NP_033476.1   |0.8509719222462203|
++--------------+--------------+------------------+
+only showing top 10 rows
+
+**********************************************************
+Podsumowanie czasów wykonania:
+krok_1_wczytanie_i_probkowanie: 4.67 sekundy
+krok_2_ekstrakcja_sekwencji: 0.08 sekundy
+krok_3_generowanie_trojpeptydow: 0.07 sekundy
+krok_4_polaczenie_krzyzowe_i_filtrowanie: 0.05 sekundy
+krok_5_obliczenie_jaccarda: 0.19 sekundy
+krok_6_rangowanie_i_wybor: 985.22 sekundy
+krok_7_zapisanie_wynikow: 996.4 sekundy
+calkowity_czas_wykonania_sekundy: 1986.68 sekundy

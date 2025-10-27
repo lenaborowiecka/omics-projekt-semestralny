@@ -1,0 +1,1339 @@
+INFO:    Using cached SIF image
+ps: invalid option -- 'p'
+BusyBox v1.36.1 (2023-10-17 11:19:33 UTC) multi-call binary.
+
+Usage: ps [-o COL1,COL2=HEADER] [-T]
+
+Show list of processes
+
+	-o COL1,COL2=HEADER	Select columns for display
+	-T			Show threads
+25/10/26 23:21:43 INFO SparkContext: Running Spark version 3.5.0
+25/10/26 23:21:43 INFO SparkContext: OS info Linux, 5.14.0-503.19.1.el9_5.x86_64, amd64
+25/10/26 23:21:43 INFO SparkContext: Java version 21.0.1-internal
+25/10/26 23:21:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/10/26 23:21:44 INFO ResourceUtils: ==============================================================
+25/10/26 23:21:44 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/10/26 23:21:44 INFO ResourceUtils: ==============================================================
+25/10/26 23:21:44 INFO SparkContext: Submitted application: Protein MinHash Similarity
+25/10/26 23:21:44 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/10/26 23:21:44 INFO ResourceProfile: Limiting resource is cpu
+25/10/26 23:21:44 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/10/26 23:21:44 INFO SecurityManager: Changing view acls to: lboro
+25/10/26 23:21:44 INFO SecurityManager: Changing modify acls to: lboro
+25/10/26 23:21:44 INFO SecurityManager: Changing view acls groups to: 
+25/10/26 23:21:44 INFO SecurityManager: Changing modify acls groups to: 
+25/10/26 23:21:44 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: lboro; groups with view permissions: EMPTY; users with modify permissions: lboro; groups with modify permissions: EMPTY
+25/10/26 23:21:44 INFO Utils: Successfully started service 'sparkDriver' on port 41591.
+25/10/26 23:21:44 INFO SparkEnv: Registering MapOutputTracker
+25/10/26 23:21:44 INFO SparkEnv: Registering BlockManagerMaster
+25/10/26 23:21:44 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/10/26 23:21:44 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/10/26 23:21:44 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/10/26 23:21:44 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-a05cefd7-ea7e-4bac-b068-de42dbcf9238
+25/10/26 23:21:44 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+25/10/26 23:21:44 INFO SparkEnv: Registering OutputCommitCoordinator
+25/10/26 23:21:44 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/10/26 23:21:44 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/10/26 23:21:45 INFO Executor: Starting executor ID driver on host t6-9.hpc.icm.edu.pl
+25/10/26 23:21:45 INFO Executor: OS info Linux, 5.14.0-503.19.1.el9_5.x86_64, amd64
+25/10/26 23:21:45 INFO Executor: Java version 21.0.1-internal
+25/10/26 23:21:45 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/10/26 23:21:45 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@60134c6e for default.
+25/10/26 23:21:45 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 37991.
+25/10/26 23:21:45 INFO NettyBlockTransferService: Server created on t6-9.hpc.icm.edu.pl:37991
+25/10/26 23:21:45 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/10/26 23:21:45 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, t6-9.hpc.icm.edu.pl, 37991, None)
+25/10/26 23:21:45 INFO BlockManagerMasterEndpoint: Registering block manager t6-9.hpc.icm.edu.pl:37991 with 434.4 MiB RAM, BlockManagerId(driver, t6-9.hpc.icm.edu.pl, 37991, None)
+25/10/26 23:21:45 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, t6-9.hpc.icm.edu.pl, 37991, None)
+25/10/26 23:21:45 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, t6-9.hpc.icm.edu.pl, 37991, None)
+25/10/26 23:21:45 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/10/26 23:21:45 INFO SharedState: Warehouse path is 'file:/lu/topola/home/lboro/omics-projekt-semestralny/spark-warehouse'.
+25/10/26 23:21:46 INFO InMemoryFileIndex: It took 66 ms to list leaf files for 1 paths.
+25/10/26 23:21:46 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+25/10/26 23:21:46 INFO DAGScheduler: Got job 0 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/26 23:21:46 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+25/10/26 23:21:46 INFO DAGScheduler: Parents of final stage: List()
+25/10/26 23:21:46 INFO DAGScheduler: Missing parents: List()
+25/10/26 23:21:46 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/26 23:21:47 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 103.2 KiB, free 434.3 MiB)
+25/10/26 23:21:47 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 37.1 KiB, free 434.3 MiB)
+25/10/26 23:21:47 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 37.1 KiB, free: 434.4 MiB)
+25/10/26 23:21:47 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:21:47 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/26 23:21:47 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+25/10/26 23:21:47 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (t6-9.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 7803 bytes) 
+25/10/26 23:21:47 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+25/10/26 23:21:47 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2919 bytes result sent to driver
+25/10/26 23:21:47 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 380 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/26 23:21:47 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+25/10/26 23:21:47 INFO DAGScheduler: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.518 s
+25/10/26 23:21:47 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/26 23:21:47 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+25/10/26 23:21:47 INFO DAGScheduler: Job 0 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.554375 s
+25/10/26 23:21:48 INFO BlockManagerInfo: Removed broadcast_0_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 37.1 KiB, free: 434.4 MiB)
+25/10/26 23:21:48 INFO InMemoryFileIndex: It took 15 ms to list leaf files for 1 paths.
+25/10/26 23:21:48 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+25/10/26 23:21:48 INFO DAGScheduler: Got job 1 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/26 23:21:48 INFO DAGScheduler: Final stage: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0)
+25/10/26 23:21:48 INFO DAGScheduler: Parents of final stage: List()
+25/10/26 23:21:48 INFO DAGScheduler: Missing parents: List()
+25/10/26 23:21:48 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/26 23:21:48 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 103.2 KiB, free 434.3 MiB)
+25/10/26 23:21:48 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 37.1 KiB, free 434.3 MiB)
+25/10/26 23:21:48 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 37.1 KiB, free: 434.4 MiB)
+25/10/26 23:21:48 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:21:48 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/26 23:21:48 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+25/10/26 23:21:48 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (t6-9.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 7802 bytes) 
+25/10/26 23:21:48 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+25/10/26 23:21:48 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2876 bytes result sent to driver
+25/10/26 23:21:48 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 31 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/26 23:21:48 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+25/10/26 23:21:48 INFO DAGScheduler: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.057 s
+25/10/26 23:21:48 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/26 23:21:48 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+25/10/26 23:21:48 INFO DAGScheduler: Job 1 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.061045 s
+25/10/26 23:21:48 INFO FileSourceStrategy: Pushed Filters: 
+25/10/26 23:21:48 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/26 23:21:49 INFO BlockManagerInfo: Removed broadcast_1_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 37.1 KiB, free: 434.4 MiB)
+25/10/26 23:21:49 INFO CodeGenerator: Code generated in 191.457108 ms
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 200.7 KiB, free 434.2 MiB)
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.7 KiB, free 434.2 MiB)
+25/10/26 23:21:49 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 34.7 KiB, free: 434.4 MiB)
+25/10/26 23:21:49 INFO SparkContext: Created broadcast 2 from count at NativeMethodAccessorImpl.java:0
+25/10/26 23:21:49 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4611818 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/26 23:21:49 INFO DAGScheduler: Registering RDD 7 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+25/10/26 23:21:49 INFO DAGScheduler: Got map stage job 2 (count at NativeMethodAccessorImpl.java:0) with 12 output partitions
+25/10/26 23:21:49 INFO DAGScheduler: Final stage: ShuffleMapStage 2 (count at NativeMethodAccessorImpl.java:0)
+25/10/26 23:21:49 INFO DAGScheduler: Parents of final stage: List()
+25/10/26 23:21:49 INFO DAGScheduler: Missing parents: List()
+25/10/26 23:21:49 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[7] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 16.8 KiB, free 434.2 MiB)
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 7.7 KiB, free 434.1 MiB)
+25/10/26 23:21:49 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 7.7 KiB, free: 434.4 MiB)
+25/10/26 23:21:49 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:21:49 INFO DAGScheduler: Submitting 12 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[7] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11))
+25/10/26 23:21:49 INFO TaskSchedulerImpl: Adding task set 2.0 with 12 tasks resource profile 0
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (t6-9.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 3) (t6-9.hpc.icm.edu.pl, executor driver, partition 1, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 4) (t6-9.hpc.icm.edu.pl, executor driver, partition 2, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 5) (t6-9.hpc.icm.edu.pl, executor driver, partition 3, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 4.0 in stage 2.0 (TID 6) (t6-9.hpc.icm.edu.pl, executor driver, partition 4, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 5.0 in stage 2.0 (TID 7) (t6-9.hpc.icm.edu.pl, executor driver, partition 5, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 6.0 in stage 2.0 (TID 8) (t6-9.hpc.icm.edu.pl, executor driver, partition 6, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 7.0 in stage 2.0 (TID 9) (t6-9.hpc.icm.edu.pl, executor driver, partition 7, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 8.0 in stage 2.0 (TID 10) (t6-9.hpc.icm.edu.pl, executor driver, partition 8, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 9.0 in stage 2.0 (TID 11) (t6-9.hpc.icm.edu.pl, executor driver, partition 9, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 10.0 in stage 2.0 (TID 12) (t6-9.hpc.icm.edu.pl, executor driver, partition 10, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 11.0 in stage 2.0 (TID 13) (t6-9.hpc.icm.edu.pl, executor driver, partition 11, PROCESS_LOCAL, 8269 bytes) 
+25/10/26 23:21:49 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+25/10/26 23:21:49 INFO Executor: Running task 1.0 in stage 2.0 (TID 3)
+25/10/26 23:21:49 INFO Executor: Running task 2.0 in stage 2.0 (TID 4)
+25/10/26 23:21:49 INFO Executor: Running task 3.0 in stage 2.0 (TID 5)
+25/10/26 23:21:49 INFO Executor: Running task 4.0 in stage 2.0 (TID 6)
+25/10/26 23:21:49 INFO Executor: Running task 6.0 in stage 2.0 (TID 8)
+25/10/26 23:21:49 INFO Executor: Running task 5.0 in stage 2.0 (TID 7)
+25/10/26 23:21:49 INFO Executor: Running task 7.0 in stage 2.0 (TID 9)
+25/10/26 23:21:49 INFO Executor: Running task 8.0 in stage 2.0 (TID 10)
+25/10/26 23:21:49 INFO Executor: Running task 10.0 in stage 2.0 (TID 12)
+25/10/26 23:21:49 INFO Executor: Running task 9.0 in stage 2.0 (TID 11)
+25/10/26 23:21:49 INFO Executor: Running task 11.0 in stage 2.0 (TID 13)
+25/10/26 23:21:49 INFO CodeGenerator: Code generated in 15.452782 ms
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 13835454-14158322, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 0-4611818, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 9223636-13835454, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 9223636-13835454, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 9223636-13835454, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 13835454-14288646, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 4611818-9223636, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 0-4611818, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 13835454-14311938, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 4611818-9223636, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 0-4611818, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 4611818-9223636, partition values: [empty row]
+25/10/26 23:21:49 INFO Executor: Finished task 9.0 in stage 2.0 (TID 11). 2186 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 10.0 in stage 2.0 (TID 12). 2186 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 11.0 in stage 2.0 (TID 13). 2186 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 5.0 in stage 2.0 (TID 7). 2186 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 3.0 in stage 2.0 (TID 5). 2143 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 1.0 in stage 2.0 (TID 3). 2186 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 8.0 in stage 2.0 (TID 10). 2186 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 2186 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 7.0 in stage 2.0 (TID 9). 2229 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 6.0 in stage 2.0 (TID 8). 2143 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 4.0 in stage 2.0 (TID 6). 2229 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 11.0 in stage 2.0 (TID 13) in 247 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 5) in 251 ms on t6-9.hpc.icm.edu.pl (executor driver) (2/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 3) in 253 ms on t6-9.hpc.icm.edu.pl (executor driver) (3/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 8.0 in stage 2.0 (TID 10) in 251 ms on t6-9.hpc.icm.edu.pl (executor driver) (4/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 258 ms on t6-9.hpc.icm.edu.pl (executor driver) (5/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 4.0 in stage 2.0 (TID 6) in 254 ms on t6-9.hpc.icm.edu.pl (executor driver) (6/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 7.0 in stage 2.0 (TID 9) in 254 ms on t6-9.hpc.icm.edu.pl (executor driver) (7/12)
+25/10/26 23:21:49 INFO Executor: Finished task 2.0 in stage 2.0 (TID 4). 2186 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 6.0 in stage 2.0 (TID 8) in 255 ms on t6-9.hpc.icm.edu.pl (executor driver) (8/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 9.0 in stage 2.0 (TID 11) in 254 ms on t6-9.hpc.icm.edu.pl (executor driver) (9/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 10.0 in stage 2.0 (TID 12) in 255 ms on t6-9.hpc.icm.edu.pl (executor driver) (10/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 4) in 258 ms on t6-9.hpc.icm.edu.pl (executor driver) (11/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 5.0 in stage 2.0 (TID 7) in 258 ms on t6-9.hpc.icm.edu.pl (executor driver) (12/12)
+25/10/26 23:21:49 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+25/10/26 23:21:49 INFO DAGScheduler: ShuffleMapStage 2 (count at NativeMethodAccessorImpl.java:0) finished in 0.311 s
+25/10/26 23:21:49 INFO DAGScheduler: looking for newly runnable stages
+25/10/26 23:21:49 INFO DAGScheduler: running: Set()
+25/10/26 23:21:49 INFO DAGScheduler: waiting: Set()
+25/10/26 23:21:49 INFO DAGScheduler: failed: Set()
+25/10/26 23:21:49 INFO CodeGenerator: Code generated in 13.360366 ms
+25/10/26 23:21:49 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+25/10/26 23:21:49 INFO DAGScheduler: Got job 3 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/26 23:21:49 INFO DAGScheduler: Final stage: ResultStage 4 (count at NativeMethodAccessorImpl.java:0)
+25/10/26 23:21:49 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+25/10/26 23:21:49 INFO DAGScheduler: Missing parents: List()
+25/10/26 23:21:49 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[10] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 12.5 KiB, free 434.1 MiB)
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 434.1 MiB)
+25/10/26 23:21:49 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 5.9 KiB, free: 434.4 MiB)
+25/10/26 23:21:49 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:21:49 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[10] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/26 23:21:49 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 14) (t6-9.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+25/10/26 23:21:49 INFO Executor: Running task 0.0 in stage 4.0 (TID 14)
+25/10/26 23:21:49 INFO ShuffleBlockFetcherIterator: Getting 12 (720.0 B) non-empty blocks including 12 (720.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 9 ms
+25/10/26 23:21:49 INFO CodeGenerator: Code generated in 13.398564 ms
+25/10/26 23:21:49 INFO Executor: Finished task 0.0 in stage 4.0 (TID 14). 4038 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 14) in 70 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/26 23:21:49 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+25/10/26 23:21:49 INFO DAGScheduler: ResultStage 4 (count at NativeMethodAccessorImpl.java:0) finished in 0.080 s
+25/10/26 23:21:49 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/26 23:21:49 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+25/10/26 23:21:49 INFO DAGScheduler: Job 3 finished: count at NativeMethodAccessorImpl.java:0, took 0.089650 s
+25/10/26 23:21:49 INFO FileSourceStrategy: Pushed Filters: 
+25/10/26 23:21:49 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 200.7 KiB, free 433.9 MiB)
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 34.7 KiB, free 433.9 MiB)
+25/10/26 23:21:49 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 34.7 KiB, free: 434.3 MiB)
+25/10/26 23:21:49 INFO SparkContext: Created broadcast 5 from count at NativeMethodAccessorImpl.java:0
+25/10/26 23:21:49 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4334160 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/26 23:21:49 INFO DAGScheduler: Registering RDD 14 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 1
+25/10/26 23:21:49 INFO DAGScheduler: Got map stage job 4 (count at NativeMethodAccessorImpl.java:0) with 12 output partitions
+25/10/26 23:21:49 INFO DAGScheduler: Final stage: ShuffleMapStage 5 (count at NativeMethodAccessorImpl.java:0)
+25/10/26 23:21:49 INFO DAGScheduler: Parents of final stage: List()
+25/10/26 23:21:49 INFO DAGScheduler: Missing parents: List()
+25/10/26 23:21:49 INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[14] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 16.8 KiB, free 433.9 MiB)
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 7.7 KiB, free 433.9 MiB)
+25/10/26 23:21:49 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 7.7 KiB, free: 434.3 MiB)
+25/10/26 23:21:49 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:21:49 INFO DAGScheduler: Submitting 12 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[14] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11))
+25/10/26 23:21:49 INFO TaskSchedulerImpl: Adding task set 5.0 with 12 tasks resource profile 0
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 15) (t6-9.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 16) (t6-9.hpc.icm.edu.pl, executor driver, partition 1, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 2.0 in stage 5.0 (TID 17) (t6-9.hpc.icm.edu.pl, executor driver, partition 2, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 3.0 in stage 5.0 (TID 18) (t6-9.hpc.icm.edu.pl, executor driver, partition 3, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 4.0 in stage 5.0 (TID 19) (t6-9.hpc.icm.edu.pl, executor driver, partition 4, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 5.0 in stage 5.0 (TID 20) (t6-9.hpc.icm.edu.pl, executor driver, partition 5, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 6.0 in stage 5.0 (TID 21) (t6-9.hpc.icm.edu.pl, executor driver, partition 6, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 7.0 in stage 5.0 (TID 22) (t6-9.hpc.icm.edu.pl, executor driver, partition 7, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 8.0 in stage 5.0 (TID 23) (t6-9.hpc.icm.edu.pl, executor driver, partition 8, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 9.0 in stage 5.0 (TID 24) (t6-9.hpc.icm.edu.pl, executor driver, partition 9, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 10.0 in stage 5.0 (TID 25) (t6-9.hpc.icm.edu.pl, executor driver, partition 10, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 11.0 in stage 5.0 (TID 26) (t6-9.hpc.icm.edu.pl, executor driver, partition 11, PROCESS_LOCAL, 8268 bytes) 
+25/10/26 23:21:49 INFO Executor: Running task 4.0 in stage 5.0 (TID 19)
+25/10/26 23:21:49 INFO Executor: Running task 0.0 in stage 5.0 (TID 15)
+25/10/26 23:21:49 INFO Executor: Running task 6.0 in stage 5.0 (TID 21)
+25/10/26 23:21:49 INFO Executor: Running task 2.0 in stage 5.0 (TID 17)
+25/10/26 23:21:49 INFO Executor: Running task 8.0 in stage 5.0 (TID 23)
+25/10/26 23:21:49 INFO Executor: Running task 3.0 in stage 5.0 (TID 18)
+25/10/26 23:21:49 INFO Executor: Running task 5.0 in stage 5.0 (TID 20)
+25/10/26 23:21:49 INFO Executor: Running task 10.0 in stage 5.0 (TID 25)
+25/10/26 23:21:49 INFO Executor: Running task 11.0 in stage 5.0 (TID 26)
+25/10/26 23:21:49 INFO Executor: Running task 1.0 in stage 5.0 (TID 16)
+25/10/26 23:21:49 INFO Executor: Running task 7.0 in stage 5.0 (TID 22)
+25/10/26 23:21:49 INFO Executor: Running task 9.0 in stage 5.0 (TID 24)
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 8668320-13002480, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 4334160-8668320, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 4334160-8668320, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 8668320-13002480, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 4334160-8668320, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 0-4334160, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 13002480-13105606, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 8668320-13002480, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 13002480-13149302, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 13002480-13172102, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 0-4334160, partition values: [empty row]
+25/10/26 23:21:49 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 0-4334160, partition values: [empty row]
+25/10/26 23:21:49 INFO Executor: Finished task 11.0 in stage 5.0 (TID 26). 2100 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 3.0 in stage 5.0 (TID 18). 2100 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 11.0 in stage 5.0 (TID 26) in 32 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 3.0 in stage 5.0 (TID 18) in 36 ms on t6-9.hpc.icm.edu.pl (executor driver) (2/12)
+25/10/26 23:21:49 INFO Executor: Finished task 9.0 in stage 5.0 (TID 24). 2100 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 9.0 in stage 5.0 (TID 24) in 35 ms on t6-9.hpc.icm.edu.pl (executor driver) (3/12)
+25/10/26 23:21:49 INFO Executor: Finished task 1.0 in stage 5.0 (TID 16). 2186 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 6.0 in stage 5.0 (TID 21). 2143 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 16) in 43 ms on t6-9.hpc.icm.edu.pl (executor driver) (4/12)
+25/10/26 23:21:49 INFO Executor: Finished task 0.0 in stage 5.0 (TID 15). 2143 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 6.0 in stage 5.0 (TID 21) in 42 ms on t6-9.hpc.icm.edu.pl (executor driver) (5/12)
+25/10/26 23:21:49 INFO Executor: Finished task 4.0 in stage 5.0 (TID 19). 2229 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 2.0 in stage 5.0 (TID 17). 2143 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 15) in 46 ms on t6-9.hpc.icm.edu.pl (executor driver) (6/12)
+25/10/26 23:21:49 INFO Executor: Finished task 8.0 in stage 5.0 (TID 23). 2143 bytes result sent to driver
+25/10/26 23:21:49 INFO BlockManagerInfo: Removed broadcast_4_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 5.9 KiB, free: 434.3 MiB)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 4.0 in stage 5.0 (TID 19) in 45 ms on t6-9.hpc.icm.edu.pl (executor driver) (7/12)
+25/10/26 23:21:49 INFO Executor: Finished task 5.0 in stage 5.0 (TID 20). 2143 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 2.0 in stage 5.0 (TID 17) in 46 ms on t6-9.hpc.icm.edu.pl (executor driver) (8/12)
+25/10/26 23:21:49 INFO Executor: Finished task 10.0 in stage 5.0 (TID 25). 2143 bytes result sent to driver
+25/10/26 23:21:49 INFO Executor: Finished task 7.0 in stage 5.0 (TID 22). 2186 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 8.0 in stage 5.0 (TID 23) in 45 ms on t6-9.hpc.icm.edu.pl (executor driver) (9/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 5.0 in stage 5.0 (TID 20) in 46 ms on t6-9.hpc.icm.edu.pl (executor driver) (10/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 10.0 in stage 5.0 (TID 25) in 45 ms on t6-9.hpc.icm.edu.pl (executor driver) (11/12)
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 7.0 in stage 5.0 (TID 22) in 47 ms on t6-9.hpc.icm.edu.pl (executor driver) (12/12)
+25/10/26 23:21:49 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+25/10/26 23:21:49 INFO DAGScheduler: ShuffleMapStage 5 (count at NativeMethodAccessorImpl.java:0) finished in 0.057 s
+25/10/26 23:21:49 INFO DAGScheduler: looking for newly runnable stages
+25/10/26 23:21:49 INFO DAGScheduler: running: Set()
+25/10/26 23:21:49 INFO DAGScheduler: waiting: Set()
+25/10/26 23:21:49 INFO DAGScheduler: failed: Set()
+25/10/26 23:21:49 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+25/10/26 23:21:49 INFO DAGScheduler: Got job 5 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/26 23:21:49 INFO DAGScheduler: Final stage: ResultStage 7 (count at NativeMethodAccessorImpl.java:0)
+25/10/26 23:21:49 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 6)
+25/10/26 23:21:49 INFO DAGScheduler: Missing parents: List()
+25/10/26 23:21:49 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[17] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 12.5 KiB, free 433.9 MiB)
+25/10/26 23:21:49 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 433.9 MiB)
+25/10/26 23:21:49 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 5.9 KiB, free: 434.3 MiB)
+25/10/26 23:21:49 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:21:49 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[17] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/26 23:21:49 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks resource profile 0
+25/10/26 23:21:49 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 27) (t6-9.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+25/10/26 23:21:49 INFO Executor: Running task 0.0 in stage 7.0 (TID 27)
+25/10/26 23:21:49 INFO ShuffleBlockFetcherIterator: Getting 12 (720.0 B) non-empty blocks including 12 (720.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/10/26 23:21:49 INFO Executor: Finished task 0.0 in stage 7.0 (TID 27). 3995 bytes result sent to driver
+25/10/26 23:21:49 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 27) in 12 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/26 23:21:49 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+25/10/26 23:21:49 INFO DAGScheduler: ResultStage 7 (count at NativeMethodAccessorImpl.java:0) finished in 0.019 s
+25/10/26 23:21:49 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/26 23:21:49 INFO TaskSchedulerImpl: Killing all running tasks in stage 7: Stage finished
+25/10/26 23:21:49 INFO DAGScheduler: Job 5 finished: count at NativeMethodAccessorImpl.java:0, took 0.022460 s
+25/10/26 23:21:50 INFO FileSourceStrategy: Pushed Filters: 
+25/10/26 23:21:50 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/26 23:21:50 INFO FileSourceStrategy: Pushed Filters: 
+25/10/26 23:21:50 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/26 23:21:50 INFO CodeGenerator: Code generated in 13.254585 ms
+25/10/26 23:21:50 INFO CodeGenerator: Code generated in 15.663705 ms
+25/10/26 23:21:50 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 200.8 KiB, free 433.7 MiB)
+25/10/26 23:21:50 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 433.6 MiB)
+25/10/26 23:21:50 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 34.9 KiB, free: 434.3 MiB)
+25/10/26 23:21:50 INFO SparkContext: Created broadcast 8 from javaToPython at NativeMethodAccessorImpl.java:0
+25/10/26 23:21:50 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4611818 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/26 23:21:50 INFO CodeGenerator: Code generated in 10.140898 ms
+25/10/26 23:21:50 INFO CodeGenerator: Code generated in 21.757609 ms
+25/10/26 23:21:50 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 200.8 KiB, free 433.4 MiB)
+25/10/26 23:21:50 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 433.4 MiB)
+25/10/26 23:21:50 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 34.9 KiB, free: 434.2 MiB)
+25/10/26 23:21:50 INFO SparkContext: Created broadcast 9 from javaToPython at NativeMethodAccessorImpl.java:0
+25/10/26 23:21:50 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4334160 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/26 23:21:50 INFO SparkContext: Starting job: collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93
+25/10/26 23:21:50 INFO DAGScheduler: Registering RDD 35 (distinct at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93) as input to shuffle 2
+25/10/26 23:21:50 INFO DAGScheduler: Got job 6 (collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93) with 24 output partitions
+25/10/26 23:21:50 INFO DAGScheduler: Final stage: ResultStage 9 (collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93)
+25/10/26 23:21:50 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 8)
+25/10/26 23:21:50 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 8)
+25/10/26 23:21:50 INFO DAGScheduler: Submitting ShuffleMapStage 8 (PairwiseRDD[35] at distinct at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93), which has no missing parents
+25/10/26 23:21:50 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 51.8 KiB, free 433.4 MiB)
+25/10/26 23:21:50 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 23.2 KiB, free 433.3 MiB)
+25/10/26 23:21:50 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 23.2 KiB, free: 434.2 MiB)
+25/10/26 23:21:50 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:21:50 INFO DAGScheduler: Submitting 24 missing tasks from ShuffleMapStage 8 (PairwiseRDD[35] at distinct at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+25/10/26 23:21:50 INFO TaskSchedulerImpl: Adding task set 8.0 with 24 tasks resource profile 0
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 28) (t6-9.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 1.0 in stage 8.0 (TID 29) (t6-9.hpc.icm.edu.pl, executor driver, partition 1, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 2.0 in stage 8.0 (TID 30) (t6-9.hpc.icm.edu.pl, executor driver, partition 2, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 3.0 in stage 8.0 (TID 31) (t6-9.hpc.icm.edu.pl, executor driver, partition 3, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 4.0 in stage 8.0 (TID 32) (t6-9.hpc.icm.edu.pl, executor driver, partition 4, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 5.0 in stage 8.0 (TID 33) (t6-9.hpc.icm.edu.pl, executor driver, partition 5, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 6.0 in stage 8.0 (TID 34) (t6-9.hpc.icm.edu.pl, executor driver, partition 6, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 7.0 in stage 8.0 (TID 35) (t6-9.hpc.icm.edu.pl, executor driver, partition 7, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 8.0 in stage 8.0 (TID 36) (t6-9.hpc.icm.edu.pl, executor driver, partition 8, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 9.0 in stage 8.0 (TID 37) (t6-9.hpc.icm.edu.pl, executor driver, partition 9, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 10.0 in stage 8.0 (TID 38) (t6-9.hpc.icm.edu.pl, executor driver, partition 10, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO TaskSetManager: Starting task 11.0 in stage 8.0 (TID 39) (t6-9.hpc.icm.edu.pl, executor driver, partition 11, PROCESS_LOCAL, 8378 bytes) 
+25/10/26 23:21:50 INFO Executor: Running task 5.0 in stage 8.0 (TID 33)
+25/10/26 23:21:50 INFO Executor: Running task 7.0 in stage 8.0 (TID 35)
+25/10/26 23:21:50 INFO Executor: Running task 1.0 in stage 8.0 (TID 29)
+25/10/26 23:21:50 INFO Executor: Running task 2.0 in stage 8.0 (TID 30)
+25/10/26 23:21:50 INFO Executor: Running task 10.0 in stage 8.0 (TID 38)
+25/10/26 23:21:50 INFO Executor: Running task 8.0 in stage 8.0 (TID 36)
+25/10/26 23:21:50 INFO Executor: Running task 9.0 in stage 8.0 (TID 37)
+25/10/26 23:21:50 INFO Executor: Running task 3.0 in stage 8.0 (TID 31)
+25/10/26 23:21:50 INFO Executor: Running task 4.0 in stage 8.0 (TID 32)
+25/10/26 23:21:50 INFO Executor: Running task 11.0 in stage 8.0 (TID 39)
+25/10/26 23:21:50 INFO Executor: Running task 0.0 in stage 8.0 (TID 28)
+25/10/26 23:21:50 INFO Executor: Running task 6.0 in stage 8.0 (TID 34)
+25/10/26 23:21:50 INFO CodeGenerator: Code generated in 13.555878 ms
+25/10/26 23:21:50 INFO BlockManagerInfo: Removed broadcast_7_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 5.9 KiB, free: 434.2 MiB)
+25/10/26 23:21:50 INFO BlockManagerInfo: Removed broadcast_5_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 34.7 KiB, free: 434.3 MiB)
+25/10/26 23:21:50 INFO BlockManagerInfo: Removed broadcast_6_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 7.7 KiB, free: 434.3 MiB)
+25/10/26 23:21:50 INFO CodeGenerator: Code generated in 11.676979 ms
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 13835454-14311938, partition values: [empty row]
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 4611818-9223636, partition values: [empty row]
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 0-4611818, partition values: [empty row]
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 9223636-13835454, partition values: [empty row]
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 9223636-13835454, partition values: [empty row]
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 4611818-9223636, partition values: [empty row]
+25/10/26 23:21:51 INFO CodeGenerator: Code generated in 19.903789 ms
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 13835454-14288646, partition values: [empty row]
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 9223636-13835454, partition values: [empty row]
+25/10/26 23:21:51 INFO CodeGenerator: Code generated in 17.097554 ms
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 0-4611818, partition values: [empty row]
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 13835454-14158322, partition values: [empty row]
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 4611818-9223636, partition values: [empty row]
+25/10/26 23:21:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 0-4611818, partition values: [empty row]
+25/10/26 23:21:51 INFO BlockManagerInfo: Removed broadcast_3_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 7.7 KiB, free: 434.3 MiB)
+25/10/26 23:21:51 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:21:51 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:21:51 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:21:51 INFO BlockManagerInfo: Removed broadcast_2_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 34.7 KiB, free: 434.3 MiB)
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 919, boot = 796, init = 123, finish = 0
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 898, boot = 787, init = 111, finish = 0
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 901, boot = 793, init = 107, finish = 1
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 956, boot = 821, init = 135, finish = 0
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 928, boot = 816, init = 112, finish = 0
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 915, boot = 804, init = 110, finish = 1
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 1025, boot = 867, init = 158, finish = 0
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 980, boot = 841, init = 139, finish = 0
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 980, boot = 845, init = 135, finish = 0
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 1012, boot = 886, init = 125, finish = 1
+25/10/26 23:21:52 INFO Executor: Finished task 5.0 in stage 8.0 (TID 33). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 12.0 in stage 8.0 (TID 40) (t6-9.hpc.icm.edu.pl, executor driver, partition 12, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 5.0 in stage 8.0 (TID 33) in 1987 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/24)
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 1025, boot = 896, init = 128, finish = 1
+25/10/26 23:21:52 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 39969
+25/10/26 23:21:52 INFO Executor: Finished task 6.0 in stage 8.0 (TID 34). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO Executor: Running task 12.0 in stage 8.0 (TID 40)
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 13.0 in stage 8.0 (TID 41) (t6-9.hpc.icm.edu.pl, executor driver, partition 13, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 6.0 in stage 8.0 (TID 34) in 1995 ms on t6-9.hpc.icm.edu.pl (executor driver) (2/24)
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 1033, boot = 901, init = 131, finish = 1
+25/10/26 23:21:52 INFO Executor: Running task 13.0 in stage 8.0 (TID 41)
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 1050, boot = 911, init = 139, finish = 0
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 1014, boot = 857, init = 156, finish = 1
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 1066, boot = 883, init = 182, finish = 1
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 1051, boot = 906, init = 144, finish = 1
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 1024, boot = 870, init = 153, finish = 1
+25/10/26 23:21:52 INFO Executor: Finished task 0.0 in stage 8.0 (TID 28). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO Executor: Finished task 3.0 in stage 8.0 (TID 31). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO Executor: Finished task 9.0 in stage 8.0 (TID 37). 3320 bytes result sent to driver
+25/10/26 23:21:52 INFO Executor: Finished task 8.0 in stage 8.0 (TID 36). 3320 bytes result sent to driver
+25/10/26 23:21:52 INFO Executor: Finished task 10.0 in stage 8.0 (TID 38). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO Executor: Finished task 2.0 in stage 8.0 (TID 30). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 14.0 in stage 8.0 (TID 42) (t6-9.hpc.icm.edu.pl, executor driver, partition 14, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO Executor: Running task 14.0 in stage 8.0 (TID 42)
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 15.0 in stage 8.0 (TID 43) (t6-9.hpc.icm.edu.pl, executor driver, partition 15, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO Executor: Running task 15.0 in stage 8.0 (TID 43)
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 16.0 in stage 8.0 (TID 44) (t6-9.hpc.icm.edu.pl, executor driver, partition 16, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO Executor: Running task 16.0 in stage 8.0 (TID 44)
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 17.0 in stage 8.0 (TID 45) (t6-9.hpc.icm.edu.pl, executor driver, partition 17, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 1064, boot = 904, init = 159, finish = 1
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 28) in 2086 ms on t6-9.hpc.icm.edu.pl (executor driver) (3/24)
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 8.0 in stage 8.0 (TID 36) in 2085 ms on t6-9.hpc.icm.edu.pl (executor driver) (4/24)
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 9.0 in stage 8.0 (TID 37) in 2085 ms on t6-9.hpc.icm.edu.pl (executor driver) (5/24)
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 3.0 in stage 8.0 (TID 31) in 2088 ms on t6-9.hpc.icm.edu.pl (executor driver) (6/24)
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 18.0 in stage 8.0 (TID 46) (t6-9.hpc.icm.edu.pl, executor driver, partition 18, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO Executor: Running task 17.0 in stage 8.0 (TID 45)
+25/10/26 23:21:52 INFO Executor: Running task 18.0 in stage 8.0 (TID 46)
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 10.0 in stage 8.0 (TID 38) in 2088 ms on t6-9.hpc.icm.edu.pl (executor driver) (7/24)
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 19.0 in stage 8.0 (TID 47) (t6-9.hpc.icm.edu.pl, executor driver, partition 19, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 2.0 in stage 8.0 (TID 30) in 2095 ms on t6-9.hpc.icm.edu.pl (executor driver) (8/24)
+25/10/26 23:21:52 INFO Executor: Running task 19.0 in stage 8.0 (TID 47)
+25/10/26 23:21:52 INFO Executor: Finished task 11.0 in stage 8.0 (TID 39). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 20.0 in stage 8.0 (TID 48) (t6-9.hpc.icm.edu.pl, executor driver, partition 20, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 11.0 in stage 8.0 (TID 39) in 2094 ms on t6-9.hpc.icm.edu.pl (executor driver) (9/24)
+25/10/26 23:21:52 INFO Executor: Running task 20.0 in stage 8.0 (TID 48)
+25/10/26 23:21:52 INFO CodeGenerator: Code generated in 31.396628 ms
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 0-4334160, partition values: [empty row]
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 8668320-13002480, partition values: [empty row]
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 4334160-8668320, partition values: [empty row]
+25/10/26 23:21:52 INFO CodeGenerator: Code generated in 11.351759 ms
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 4334160-8668320, partition values: [empty row]
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 8668320-13002480, partition values: [empty row]
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 0-4334160, partition values: [empty row]
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 4334160-8668320, partition values: [empty row]
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 0-4334160, partition values: [empty row]
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 8668320-13002480, partition values: [empty row]
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 120, boot = -1002, init = 1121, finish = 1
+25/10/26 23:21:52 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 156, boot = -1078, init = 1234, finish = 0
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 174, boot = -1052, init = 1226, finish = 0
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 169, boot = -1022, init = 1191, finish = 0
+25/10/26 23:21:52 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 195, boot = -957, init = 1152, finish = 0
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 199, boot = -1065, init = 1264, finish = 0
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 200, boot = -120, init = 319, finish = 1
+25/10/26 23:21:52 INFO Executor: Finished task 15.0 in stage 8.0 (TID 43). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 21.0 in stage 8.0 (TID 49) (t6-9.hpc.icm.edu.pl, executor driver, partition 21, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO Executor: Running task 21.0 in stage 8.0 (TID 49)
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 15.0 in stage 8.0 (TID 43) in 309 ms on t6-9.hpc.icm.edu.pl (executor driver) (10/24)
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 219, boot = -109, init = 328, finish = 0
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 221, boot = -122, init = 343, finish = 0
+25/10/26 23:21:52 INFO Executor: Finished task 12.0 in stage 8.0 (TID 40). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 22.0 in stage 8.0 (TID 50) (t6-9.hpc.icm.edu.pl, executor driver, partition 22, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO Executor: Finished task 18.0 in stage 8.0 (TID 46). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO Executor: Running task 22.0 in stage 8.0 (TID 50)
+25/10/26 23:21:52 INFO TaskSetManager: Starting task 23.0 in stage 8.0 (TID 51) (t6-9.hpc.icm.edu.pl, executor driver, partition 23, PROCESS_LOCAL, 8377 bytes) 
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 18.0 in stage 8.0 (TID 46) in 295 ms on t6-9.hpc.icm.edu.pl (executor driver) (11/24)
+25/10/26 23:21:52 INFO Executor: Running task 23.0 in stage 8.0 (TID 51)
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 12.0 in stage 8.0 (TID 40) in 402 ms on t6-9.hpc.icm.edu.pl (executor driver) (12/24)
+25/10/26 23:21:52 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 241, boot = -83, init = 323, finish = 1
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 13002480-13172102, partition values: [empty row]
+25/10/26 23:21:52 INFO Executor: Finished task 20.0 in stage 8.0 (TID 48). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 20.0 in stage 8.0 (TID 48) in 307 ms on t6-9.hpc.icm.edu.pl (executor driver) (13/24)
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 265, boot = -90, init = 355, finish = 0
+25/10/26 23:21:52 INFO Executor: Finished task 17.0 in stage 8.0 (TID 45). 3277 bytes result sent to driver
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 17.0 in stage 8.0 (TID 45) in 354 ms on t6-9.hpc.icm.edu.pl (executor driver) (14/24)
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 13002480-13105606, partition values: [empty row]
+25/10/26 23:21:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 13002480-13149302, partition values: [empty row]
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 199, boot = -150, init = 349, finish = 0
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 100, boot = -112, init = 212, finish = 0
+25/10/26 23:21:52 INFO Executor: Finished task 14.0 in stage 8.0 (TID 42). 3320 bytes result sent to driver
+25/10/26 23:21:52 INFO TaskSetManager: Finished task 14.0 in stage 8.0 (TID 42) in 445 ms on t6-9.hpc.icm.edu.pl (executor driver) (15/24)
+25/10/26 23:21:52 INFO PythonUDFRunner: Times: total = 179, boot = -92, init = 271, finish = 0
+25/10/26 23:21:52 INFO PythonRunner: Times: total = 169, boot = -38, init = 207, finish = 0
+25/10/26 23:21:52 INFO Executor: Finished task 21.0 in stage 8.0 (TID 49). 3320 bytes result sent to driver
+25/10/26 23:21:53 INFO TaskSetManager: Finished task 21.0 in stage 8.0 (TID 49) in 212 ms on t6-9.hpc.icm.edu.pl (executor driver) (16/24)
+25/10/26 23:21:53 INFO PythonUDFRunner: Times: total = 222, boot = -77, init = 299, finish = 0
+25/10/26 23:21:53 INFO PythonRunner: Times: total = 161, boot = -86, init = 247, finish = 0
+25/10/26 23:21:53 INFO Executor: Finished task 23.0 in stage 8.0 (TID 51). 3277 bytes result sent to driver
+25/10/26 23:21:53 INFO TaskSetManager: Finished task 23.0 in stage 8.0 (TID 51) in 294 ms on t6-9.hpc.icm.edu.pl (executor driver) (17/24)
+25/10/26 23:21:53 INFO PythonRunner: Times: total = 179, boot = -86, init = 265, finish = 0
+25/10/26 23:21:53 INFO Executor: Finished task 22.0 in stage 8.0 (TID 50). 3277 bytes result sent to driver
+25/10/26 23:21:53 INFO TaskSetManager: Finished task 22.0 in stage 8.0 (TID 50) in 324 ms on t6-9.hpc.icm.edu.pl (executor driver) (18/24)
+25/10/26 23:21:56 WARN GarbageCollectionMetrics: To enable non-built-in garbage collector(s) List(G1 Concurrent GC), users should configure it(them) to spark.eventLog.gcMetrics.youngGenerationGarbageCollectors or spark.eventLog.gcMetrics.oldGenerationGarbageCollectors
+25/10/26 23:21:56 INFO PythonUDFRunner: Times: total = 1284, boot = -1002, init = 1254, finish = 1032
+25/10/26 23:21:56 INFO PythonUDFRunner: Times: total = 1943, boot = -1075, init = 1261, finish = 1757
+25/10/26 23:21:57 INFO PythonUDFRunner: Times: total = 2045, boot = -1056, init = 1447, finish = 1654
+25/10/26 23:21:57 INFO PythonUDFRunner: Times: total = 4232, boot = 849, init = 379, finish = 3004
+25/10/26 23:21:57 INFO PythonUDFRunner: Times: total = 4796, boot = 807, init = 421, finish = 3568
+25/10/26 23:21:57 INFO PythonUDFRunner: Times: total = 5335, boot = 790, init = 438, finish = 4107
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 4588, boot = -152, init = 555, finish = 4185
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 4378, boot = -134, init = 550, finish = 3962
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 5930, boot = 849, init = 276, finish = 4805
+25/10/26 23:21:57 INFO Executor: Finished task 16.0 in stage 8.0 (TID 44). 3535 bytes result sent to driver
+25/10/26 23:21:57 INFO Executor: Finished task 13.0 in stage 8.0 (TID 41). 3535 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 16.0 in stage 8.0 (TID 44) in 5058 ms on t6-9.hpc.icm.edu.pl (executor driver) (19/24)
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 13.0 in stage 8.0 (TID 41) in 5136 ms on t6-9.hpc.icm.edu.pl (executor driver) (20/24)
+25/10/26 23:21:57 INFO Executor: Finished task 7.0 in stage 8.0 (TID 35). 3492 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 7.0 in stage 8.0 (TID 35) in 7133 ms on t6-9.hpc.icm.edu.pl (executor driver) (21/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 4875, boot = -145, init = 725, finish = 4295
+25/10/26 23:21:57 INFO Executor: Finished task 19.0 in stage 8.0 (TID 47). 3492 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 19.0 in stage 8.0 (TID 47) in 5069 ms on t6-9.hpc.icm.edu.pl (executor driver) (22/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 6135, boot = 889, init = 311, finish = 4935
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 6158, boot = 892, init = 299, finish = 4967
+25/10/26 23:21:57 INFO Executor: Finished task 4.0 in stage 8.0 (TID 32). 3492 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 4.0 in stage 8.0 (TID 32) in 7199 ms on t6-9.hpc.icm.edu.pl (executor driver) (23/24)
+25/10/26 23:21:57 INFO Executor: Finished task 1.0 in stage 8.0 (TID 29). 3492 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 1.0 in stage 8.0 (TID 29) in 7202 ms on t6-9.hpc.icm.edu.pl (executor driver) (24/24)
+25/10/26 23:21:57 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+25/10/26 23:21:57 INFO DAGScheduler: ShuffleMapStage 8 (distinct at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93) finished in 7.218 s
+25/10/26 23:21:57 INFO DAGScheduler: looking for newly runnable stages
+25/10/26 23:21:57 INFO DAGScheduler: running: Set()
+25/10/26 23:21:57 INFO DAGScheduler: waiting: Set(ResultStage 9)
+25/10/26 23:21:57 INFO DAGScheduler: failed: Set()
+25/10/26 23:21:57 INFO DAGScheduler: Submitting ResultStage 9 (PythonRDD[38] at collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93), which has no missing parents
+25/10/26 23:21:57 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 10.7 KiB, free 433.9 MiB)
+25/10/26 23:21:57 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 6.3 KiB, free 433.8 MiB)
+25/10/26 23:21:57 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 6.3 KiB, free: 434.3 MiB)
+25/10/26 23:21:57 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:21:57 INFO DAGScheduler: Submitting 24 missing tasks from ResultStage 9 (PythonRDD[38] at collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+25/10/26 23:21:57 INFO TaskSchedulerImpl: Adding task set 9.0 with 24 tasks resource profile 0
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 52) (t6-9.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 1.0 in stage 9.0 (TID 53) (t6-9.hpc.icm.edu.pl, executor driver, partition 1, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 2.0 in stage 9.0 (TID 54) (t6-9.hpc.icm.edu.pl, executor driver, partition 2, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 3.0 in stage 9.0 (TID 55) (t6-9.hpc.icm.edu.pl, executor driver, partition 3, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 4.0 in stage 9.0 (TID 56) (t6-9.hpc.icm.edu.pl, executor driver, partition 4, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 5.0 in stage 9.0 (TID 57) (t6-9.hpc.icm.edu.pl, executor driver, partition 5, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 6.0 in stage 9.0 (TID 58) (t6-9.hpc.icm.edu.pl, executor driver, partition 6, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 7.0 in stage 9.0 (TID 59) (t6-9.hpc.icm.edu.pl, executor driver, partition 7, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 8.0 in stage 9.0 (TID 60) (t6-9.hpc.icm.edu.pl, executor driver, partition 8, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 9.0 in stage 9.0 (TID 61) (t6-9.hpc.icm.edu.pl, executor driver, partition 9, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 10.0 in stage 9.0 (TID 62) (t6-9.hpc.icm.edu.pl, executor driver, partition 10, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 11.0 in stage 9.0 (TID 63) (t6-9.hpc.icm.edu.pl, executor driver, partition 11, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO Executor: Running task 2.0 in stage 9.0 (TID 54)
+25/10/26 23:21:57 INFO Executor: Running task 6.0 in stage 9.0 (TID 58)
+25/10/26 23:21:57 INFO Executor: Running task 5.0 in stage 9.0 (TID 57)
+25/10/26 23:21:57 INFO Executor: Running task 0.0 in stage 9.0 (TID 52)
+25/10/26 23:21:57 INFO Executor: Running task 3.0 in stage 9.0 (TID 55)
+25/10/26 23:21:57 INFO Executor: Running task 7.0 in stage 9.0 (TID 59)
+25/10/26 23:21:57 INFO Executor: Running task 4.0 in stage 9.0 (TID 56)
+25/10/26 23:21:57 INFO Executor: Running task 8.0 in stage 9.0 (TID 60)
+25/10/26 23:21:57 INFO Executor: Running task 1.0 in stage 9.0 (TID 53)
+25/10/26 23:21:57 INFO Executor: Running task 9.0 in stage 9.0 (TID 61)
+25/10/26 23:21:57 INFO Executor: Running task 11.0 in stage 9.0 (TID 63)
+25/10/26 23:21:57 INFO Executor: Running task 10.0 in stage 9.0 (TID 62)
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (9.9 KiB) non-empty blocks including 6 (9.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (9.9 KiB) non-empty blocks including 6 (9.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (12.0 KiB) non-empty blocks including 6 (12.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (12.0 KiB) non-empty blocks including 6 (12.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (9.9 KiB) non-empty blocks including 6 (9.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.1 KiB) non-empty blocks including 6 (10.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (9.9 KiB) non-empty blocks including 6 (9.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 82, boot = -4813, init = 4893, finish = 2
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 84, boot = -4788, init = 4870, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 9.0 in stage 9.0 (TID 61). 4256 bytes result sent to driver
+25/10/26 23:21:57 INFO Executor: Finished task 3.0 in stage 9.0 (TID 55). 4559 bytes result sent to driver
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 85, boot = -4534, init = 4617, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 0.0 in stage 9.0 (TID 52). 4529 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 12.0 in stage 9.0 (TID 64) (t6-9.hpc.icm.edu.pl, executor driver, partition 12, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO Executor: Running task 12.0 in stage 9.0 (TID 64)
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 13.0 in stage 9.0 (TID 65) (t6-9.hpc.icm.edu.pl, executor driver, partition 13, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 3.0 in stage 9.0 (TID 55) in 116 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/24)
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 52) in 118 ms on t6-9.hpc.icm.edu.pl (executor driver) (2/24)
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 14.0 in stage 9.0 (TID 66) (t6-9.hpc.icm.edu.pl, executor driver, partition 14, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO Executor: Running task 14.0 in stage 9.0 (TID 66)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 90, boot = -4637, init = 4724, finish = 3
+25/10/26 23:21:57 INFO Executor: Finished task 7.0 in stage 9.0 (TID 59). 4295 bytes result sent to driver
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO Executor: Running task 13.0 in stage 9.0 (TID 65)
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (12.0 KiB) non-empty blocks including 6 (12.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 9.0 in stage 9.0 (TID 61) in 120 ms on t6-9.hpc.icm.edu.pl (executor driver) (3/24)
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 15.0 in stage 9.0 (TID 67) (t6-9.hpc.icm.edu.pl, executor driver, partition 15, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO Executor: Running task 15.0 in stage 9.0 (TID 67)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 98, boot = -4525, init = 4621, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 1.0 in stage 9.0 (TID 53). 4331 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 7.0 in stage 9.0 (TID 59) in 134 ms on t6-9.hpc.icm.edu.pl (executor driver) (4/24)
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 16.0 in stage 9.0 (TID 68) (t6-9.hpc.icm.edu.pl, executor driver, partition 16, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 1.0 in stage 9.0 (TID 53) in 137 ms on t6-9.hpc.icm.edu.pl (executor driver) (5/24)
+25/10/26 23:21:57 INFO Executor: Running task 16.0 in stage 9.0 (TID 68)
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 115, boot = -190, init = 303, finish = 2
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 117, boot = -486, init = 601, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 8.0 in stage 9.0 (TID 60). 4154 bytes result sent to driver
+25/10/26 23:21:57 INFO Executor: Finished task 6.0 in stage 9.0 (TID 58). 4256 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 17.0 in stage 9.0 (TID 69) (t6-9.hpc.icm.edu.pl, executor driver, partition 17, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 18.0 in stage 9.0 (TID 70) (t6-9.hpc.icm.edu.pl, executor driver, partition 18, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 6.0 in stage 9.0 (TID 58) in 148 ms on t6-9.hpc.icm.edu.pl (executor driver) (6/24)
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 8.0 in stage 9.0 (TID 60) in 147 ms on t6-9.hpc.icm.edu.pl (executor driver) (7/24)
+25/10/26 23:21:57 INFO Executor: Running task 18.0 in stage 9.0 (TID 70)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 125, boot = -693, init = 816, finish = 2
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 126, boot = -4805, init = 4929, finish = 2
+25/10/26 23:21:57 INFO Executor: Running task 17.0 in stage 9.0 (TID 69)
+25/10/26 23:21:57 INFO Executor: Finished task 10.0 in stage 9.0 (TID 62). 4250 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 19.0 in stage 9.0 (TID 71) (t6-9.hpc.icm.edu.pl, executor driver, partition 19, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 10.0 in stage 9.0 (TID 62) in 158 ms on t6-9.hpc.icm.edu.pl (executor driver) (8/24)
+25/10/26 23:21:57 INFO Executor: Running task 19.0 in stage 9.0 (TID 71)
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO Executor: Finished task 4.0 in stage 9.0 (TID 56). 4046 bytes result sent to driver
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.2 KiB) non-empty blocks including 6 (10.2 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 20.0 in stage 9.0 (TID 72) (t6-9.hpc.icm.edu.pl, executor driver, partition 20, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+25/10/26 23:21:57 INFO Executor: Running task 20.0 in stage 9.0 (TID 72)
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 4.0 in stage 9.0 (TID 56) in 165 ms on t6-9.hpc.icm.edu.pl (executor driver) (9/24)
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (11.1 KiB) non-empty blocks including 6 (11.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 148, boot = -126, init = 272, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 5.0 in stage 9.0 (TID 57). 4220 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 21.0 in stage 9.0 (TID 73) (t6-9.hpc.icm.edu.pl, executor driver, partition 21, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 5.0 in stage 9.0 (TID 57) in 179 ms on t6-9.hpc.icm.edu.pl (executor driver) (10/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 153, boot = -262, init = 413, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 11.0 in stage 9.0 (TID 63). 4100 bytes result sent to driver
+25/10/26 23:21:57 INFO Executor: Running task 21.0 in stage 9.0 (TID 73)
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 22.0 in stage 9.0 (TID 74) (t6-9.hpc.icm.edu.pl, executor driver, partition 22, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 11.0 in stage 9.0 (TID 63) in 182 ms on t6-9.hpc.icm.edu.pl (executor driver) (11/24)
+25/10/26 23:21:57 INFO Executor: Running task 22.0 in stage 9.0 (TID 74)
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (10.9 KiB) non-empty blocks including 6 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 172, boot = -101, init = 272, finish = 1
+25/10/26 23:21:57 INFO Executor: Finished task 2.0 in stage 9.0 (TID 54). 4088 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Starting task 23.0 in stage 9.0 (TID 75) (t6-9.hpc.icm.edu.pl, executor driver, partition 23, NODE_LOCAL, 7433 bytes) 
+25/10/26 23:21:57 INFO Executor: Running task 23.0 in stage 9.0 (TID 75)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 84, boot = 6, init = 76, finish = 2
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Getting 6 (9.9 KiB) non-empty blocks including 6 (9.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/26 23:21:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 2.0 in stage 9.0 (TID 54) in 214 ms on t6-9.hpc.icm.edu.pl (executor driver) (12/24)
+25/10/26 23:21:57 INFO Executor: Finished task 14.0 in stage 9.0 (TID 66). 4481 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 14.0 in stage 9.0 (TID 66) in 105 ms on t6-9.hpc.icm.edu.pl (executor driver) (13/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 110, boot = 2, init = 106, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 16.0 in stage 9.0 (TID 68). 4268 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 16.0 in stage 9.0 (TID 68) in 123 ms on t6-9.hpc.icm.edu.pl (executor driver) (14/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 122, boot = 1, init = 119, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 13.0 in stage 9.0 (TID 65). 4427 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 13.0 in stage 9.0 (TID 65) in 148 ms on t6-9.hpc.icm.edu.pl (executor driver) (15/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 132, boot = -3, init = 133, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 15.0 in stage 9.0 (TID 67). 4331 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 15.0 in stage 9.0 (TID 67) in 152 ms on t6-9.hpc.icm.edu.pl (executor driver) (16/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 116, boot = -4, init = 118, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 19.0 in stage 9.0 (TID 71). 4427 bytes result sent to driver
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 158, boot = 4, init = 153, finish = 1
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 115, boot = 0, init = 113, finish = 2
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 19.0 in stage 9.0 (TID 71) in 130 ms on t6-9.hpc.icm.edu.pl (executor driver) (17/24)
+25/10/26 23:21:57 INFO Executor: Finished task 12.0 in stage 9.0 (TID 64). 4286 bytes result sent to driver
+25/10/26 23:21:57 INFO Executor: Finished task 17.0 in stage 9.0 (TID 69). 4190 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 17.0 in stage 9.0 (TID 69) in 143 ms on t6-9.hpc.icm.edu.pl (executor driver) (18/24)
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 12.0 in stage 9.0 (TID 64) in 177 ms on t6-9.hpc.icm.edu.pl (executor driver) (19/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 101, boot = 10, init = 89, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 22.0 in stage 9.0 (TID 74). 4331 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 22.0 in stage 9.0 (TID 74) in 113 ms on t6-9.hpc.icm.edu.pl (executor driver) (20/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 107, boot = 9, init = 96, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 21.0 in stage 9.0 (TID 73). 4325 bytes result sent to driver
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 129, boot = -7, init = 134, finish = 2
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 21.0 in stage 9.0 (TID 73) in 123 ms on t6-9.hpc.icm.edu.pl (executor driver) (21/24)
+25/10/26 23:21:57 INFO Executor: Finished task 18.0 in stage 9.0 (TID 70). 4367 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 18.0 in stage 9.0 (TID 70) in 158 ms on t6-9.hpc.icm.edu.pl (executor driver) (22/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 131, boot = 1, init = 128, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 20.0 in stage 9.0 (TID 72). 4337 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 20.0 in stage 9.0 (TID 72) in 143 ms on t6-9.hpc.icm.edu.pl (executor driver) (23/24)
+25/10/26 23:21:57 INFO PythonRunner: Times: total = 116, boot = 14, init = 100, finish = 2
+25/10/26 23:21:57 INFO Executor: Finished task 23.0 in stage 9.0 (TID 75). 4190 bytes result sent to driver
+25/10/26 23:21:57 INFO TaskSetManager: Finished task 23.0 in stage 9.0 (TID 75) in 130 ms on t6-9.hpc.icm.edu.pl (executor driver) (24/24)
+25/10/26 23:21:57 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+25/10/26 23:21:57 INFO DAGScheduler: ResultStage 9 (collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93) finished in 0.345 s
+25/10/26 23:21:57 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/26 23:21:57 INFO TaskSchedulerImpl: Killing all running tasks in stage 9: Stage finished
+25/10/26 23:21:57 INFO DAGScheduler: Job 6 finished: collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:93, took 7.578655 s
+25/10/26 23:21:58 INFO FileSourceStrategy: Pushed Filters: 
+25/10/26 23:21:58 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/26 23:21:58 INFO CodeGenerator: Code generated in 14.919046 ms
+25/10/26 23:21:58 INFO CodeGenerator: Code generated in 10.282737 ms
+25/10/26 23:21:58 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 200.8 KiB, free 433.7 MiB)
+25/10/26 23:21:58 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 433.6 MiB)
+25/10/26 23:21:58 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 34.9 KiB, free: 434.3 MiB)
+25/10/26 23:21:58 INFO SparkContext: Created broadcast 12 from head at DatasetUtils.scala:218
+25/10/26 23:21:58 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4611818 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/26 23:21:58 INFO SparkContext: Starting job: head at DatasetUtils.scala:218
+25/10/26 23:21:58 INFO DAGScheduler: Got job 7 (head at DatasetUtils.scala:218) with 1 output partitions
+25/10/26 23:21:58 INFO DAGScheduler: Final stage: ResultStage 10 (head at DatasetUtils.scala:218)
+25/10/26 23:21:58 INFO DAGScheduler: Parents of final stage: List()
+25/10/26 23:21:58 INFO DAGScheduler: Missing parents: List()
+25/10/26 23:21:58 INFO DAGScheduler: Submitting ResultStage 10 (MapPartitionsRDD[45] at head at DatasetUtils.scala:218), which has no missing parents
+25/10/26 23:21:58 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 105.7 KiB, free 433.5 MiB)
+25/10/26 23:21:58 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 74.2 KiB, free 433.4 MiB)
+25/10/26 23:21:58 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 74.2 KiB, free: 434.2 MiB)
+25/10/26 23:21:58 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:21:58 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[45] at head at DatasetUtils.scala:218) (first 15 tasks are for partitions Vector(0))
+25/10/26 23:21:58 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks resource profile 0
+25/10/26 23:21:58 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 76) (t6-9.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8280 bytes) 
+25/10/26 23:21:58 INFO Executor: Running task 0.0 in stage 10.0 (TID 76)
+25/10/26 23:21:58 INFO CodeGenerator: Code generated in 10.805541 ms
+25/10/26 23:21:58 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 0-4611818, partition values: [empty row]
+25/10/26 23:21:58 INFO CodeGenerator: Code generated in 12.145708 ms
+25/10/26 23:21:58 INFO CodeGenerator: Code generated in 10.793973 ms
+25/10/26 23:21:58 INFO PythonUDFRunner: Times: total = 557, boot = -5497, init = 6054, finish = 0
+25/10/26 23:21:58 INFO Executor: Finished task 0.0 in stage 10.0 (TID 76). 2632 bytes result sent to driver
+25/10/26 23:21:58 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 76) in 580 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/26 23:21:58 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+25/10/26 23:21:58 INFO DAGScheduler: ResultStage 10 (head at DatasetUtils.scala:218) finished in 0.586 s
+25/10/26 23:21:58 INFO DAGScheduler: Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/26 23:21:58 INFO TaskSchedulerImpl: Killing all running tasks in stage 10: Stage finished
+25/10/26 23:21:58 INFO DAGScheduler: Job 7 finished: head at DatasetUtils.scala:218, took 0.589863 s
+25/10/26 23:21:58 INFO SparkContext: Starting job: head at DatasetUtils.scala:218
+25/10/26 23:21:58 INFO DAGScheduler: Got job 8 (head at DatasetUtils.scala:218) with 4 output partitions
+25/10/26 23:21:58 INFO DAGScheduler: Final stage: ResultStage 11 (head at DatasetUtils.scala:218)
+25/10/26 23:21:58 INFO DAGScheduler: Parents of final stage: List()
+25/10/26 23:21:58 INFO DAGScheduler: Missing parents: List()
+25/10/26 23:21:58 INFO DAGScheduler: Submitting ResultStage 11 (MapPartitionsRDD[45] at head at DatasetUtils.scala:218), which has no missing parents
+25/10/26 23:21:58 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 105.7 KiB, free 433.3 MiB)
+25/10/26 23:21:58 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 74.2 KiB, free 433.3 MiB)
+25/10/26 23:21:58 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 74.2 KiB, free: 434.1 MiB)
+25/10/26 23:21:58 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:21:58 INFO DAGScheduler: Submitting 4 missing tasks from ResultStage 11 (MapPartitionsRDD[45] at head at DatasetUtils.scala:218) (first 15 tasks are for partitions Vector(1, 2, 3, 4))
+25/10/26 23:21:58 INFO TaskSchedulerImpl: Adding task set 11.0 with 4 tasks resource profile 0
+25/10/26 23:21:58 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 77) (t6-9.hpc.icm.edu.pl, executor driver, partition 1, PROCESS_LOCAL, 8280 bytes) 
+25/10/26 23:21:58 INFO TaskSetManager: Starting task 1.0 in stage 11.0 (TID 78) (t6-9.hpc.icm.edu.pl, executor driver, partition 2, PROCESS_LOCAL, 8280 bytes) 
+25/10/26 23:21:58 INFO TaskSetManager: Starting task 2.0 in stage 11.0 (TID 79) (t6-9.hpc.icm.edu.pl, executor driver, partition 3, PROCESS_LOCAL, 8280 bytes) 
+25/10/26 23:21:58 INFO TaskSetManager: Starting task 3.0 in stage 11.0 (TID 80) (t6-9.hpc.icm.edu.pl, executor driver, partition 4, PROCESS_LOCAL, 8280 bytes) 
+25/10/26 23:21:58 INFO Executor: Running task 1.0 in stage 11.0 (TID 78)
+25/10/26 23:21:58 INFO Executor: Running task 2.0 in stage 11.0 (TID 79)
+25/10/26 23:21:58 INFO Executor: Running task 3.0 in stage 11.0 (TID 80)
+25/10/26 23:21:58 INFO Executor: Running task 0.0 in stage 11.0 (TID 77)
+25/10/26 23:21:58 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 4611818-9223636, partition values: [empty row]
+25/10/26 23:21:58 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 4611818-9223636, partition values: [empty row]
+25/10/26 23:21:58 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 0-4611818, partition values: [empty row]
+25/10/26 23:21:58 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 9223636-13835454, partition values: [empty row]
+25/10/26 23:21:58 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:21:58 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:21:59 INFO PythonUDFRunner: Times: total = 559, boot = -5797, init = 6356, finish = 0
+25/10/26 23:21:59 INFO PythonUDFRunner: Times: total = 560, boot = -6042, init = 6602, finish = 0
+25/10/26 23:21:59 INFO Executor: Finished task 2.0 in stage 11.0 (TID 79). 2632 bytes result sent to driver
+25/10/26 23:21:59 INFO Executor: Finished task 1.0 in stage 11.0 (TID 78). 2632 bytes result sent to driver
+25/10/26 23:21:59 INFO TaskSetManager: Finished task 2.0 in stage 11.0 (TID 79) in 570 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/4)
+25/10/26 23:21:59 INFO TaskSetManager: Finished task 1.0 in stage 11.0 (TID 78) in 570 ms on t6-9.hpc.icm.edu.pl (executor driver) (2/4)
+25/10/26 23:21:59 INFO Executor: Finished task 3.0 in stage 11.0 (TID 80). 4872 bytes result sent to driver
+25/10/26 23:21:59 INFO Executor: Finished task 0.0 in stage 11.0 (TID 77). 8230 bytes result sent to driver
+25/10/26 23:21:59 INFO TaskSetManager: Finished task 3.0 in stage 11.0 (TID 80) in 579 ms on t6-9.hpc.icm.edu.pl (executor driver) (3/4)
+25/10/26 23:21:59 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 77) in 580 ms on t6-9.hpc.icm.edu.pl (executor driver) (4/4)
+25/10/26 23:21:59 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+25/10/26 23:21:59 INFO DAGScheduler: ResultStage 11 (head at DatasetUtils.scala:218) finished in 0.586 s
+25/10/26 23:21:59 INFO DAGScheduler: Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/26 23:21:59 INFO TaskSchedulerImpl: Killing all running tasks in stage 11: Stage finished
+25/10/26 23:21:59 INFO DAGScheduler: Job 8 finished: head at DatasetUtils.scala:218, took 0.589117 s
+25/10/26 23:22:00 INFO CodeGenerator: Code generated in 8.45722 ms
+25/10/26 23:22:00 INFO FileSourceStrategy: Pushed Filters: 
+25/10/26 23:22:00 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/26 23:22:00 INFO FileSourceStrategy: Pushed Filters: 
+25/10/26 23:22:00 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/26 23:22:00 INFO CodeGenerator: Code generated in 79.905709 ms
+25/10/26 23:22:00 INFO CodeGenerator: Code generated in 13.369961 ms
+25/10/26 23:22:00 INFO CodeGenerator: Code generated in 7.840136 ms
+25/10/26 23:22:00 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 200.9 KiB, free 433.1 MiB)
+25/10/26 23:22:00 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 35.0 KiB, free 433.0 MiB)
+25/10/26 23:22:00 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 35.0 KiB, free: 434.1 MiB)
+25/10/26 23:22:00 INFO SparkContext: Created broadcast 15 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:317
+25/10/26 23:22:00 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4334160 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/26 23:22:00 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:317
+25/10/26 23:22:00 INFO DAGScheduler: Got job 9 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:317) with 12 output partitions
+25/10/26 23:22:00 INFO DAGScheduler: Final stage: ResultStage 12 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:317)
+25/10/26 23:22:00 INFO DAGScheduler: Parents of final stage: List()
+25/10/26 23:22:00 INFO DAGScheduler: Missing parents: List()
+25/10/26 23:22:00 INFO DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[55] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:317), which has no missing parents
+25/10/26 23:22:00 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 170.1 KiB, free 432.9 MiB)
+25/10/26 23:22:00 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 91.9 KiB, free 432.8 MiB)
+25/10/26 23:22:00 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on t6-9.hpc.icm.edu.pl:37991 (size: 91.9 KiB, free: 434.0 MiB)
+25/10/26 23:22:00 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1580
+25/10/26 23:22:00 INFO DAGScheduler: Submitting 12 missing tasks from ResultStage 12 (MapPartitionsRDD[55] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:317) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11))
+25/10/26 23:22:00 INFO TaskSchedulerImpl: Adding task set 12.0 with 12 tasks resource profile 0
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 81) (t6-9.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 82) (t6-9.hpc.icm.edu.pl, executor driver, partition 1, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 2.0 in stage 12.0 (TID 83) (t6-9.hpc.icm.edu.pl, executor driver, partition 2, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 3.0 in stage 12.0 (TID 84) (t6-9.hpc.icm.edu.pl, executor driver, partition 3, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 4.0 in stage 12.0 (TID 85) (t6-9.hpc.icm.edu.pl, executor driver, partition 4, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 5.0 in stage 12.0 (TID 86) (t6-9.hpc.icm.edu.pl, executor driver, partition 5, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 6.0 in stage 12.0 (TID 87) (t6-9.hpc.icm.edu.pl, executor driver, partition 6, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 7.0 in stage 12.0 (TID 88) (t6-9.hpc.icm.edu.pl, executor driver, partition 7, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 8.0 in stage 12.0 (TID 89) (t6-9.hpc.icm.edu.pl, executor driver, partition 8, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 9.0 in stage 12.0 (TID 90) (t6-9.hpc.icm.edu.pl, executor driver, partition 9, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 10.0 in stage 12.0 (TID 91) (t6-9.hpc.icm.edu.pl, executor driver, partition 10, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO TaskSetManager: Starting task 11.0 in stage 12.0 (TID 92) (t6-9.hpc.icm.edu.pl, executor driver, partition 11, PROCESS_LOCAL, 8279 bytes) 
+25/10/26 23:22:00 INFO Executor: Running task 0.0 in stage 12.0 (TID 81)
+25/10/26 23:22:00 INFO Executor: Running task 6.0 in stage 12.0 (TID 87)
+25/10/26 23:22:00 INFO Executor: Running task 7.0 in stage 12.0 (TID 88)
+25/10/26 23:22:00 INFO Executor: Running task 5.0 in stage 12.0 (TID 86)
+25/10/26 23:22:00 INFO Executor: Running task 9.0 in stage 12.0 (TID 90)
+25/10/26 23:22:00 INFO Executor: Running task 10.0 in stage 12.0 (TID 91)
+25/10/26 23:22:00 INFO Executor: Running task 8.0 in stage 12.0 (TID 89)
+25/10/26 23:22:00 INFO Executor: Running task 2.0 in stage 12.0 (TID 83)
+25/10/26 23:22:00 INFO Executor: Running task 1.0 in stage 12.0 (TID 82)
+25/10/26 23:22:00 INFO Executor: Running task 4.0 in stage 12.0 (TID 85)
+25/10/26 23:22:00 INFO Executor: Running task 3.0 in stage 12.0 (TID 84)
+25/10/26 23:22:00 INFO Executor: Running task 11.0 in stage 12.0 (TID 92)
+25/10/26 23:22:01 INFO CodeGenerator: Code generated in 8.743386 ms
+25/10/26 23:22:01 INFO CodeGenerator: Code generated in 5.161061 ms
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 0-4334160, partition values: [empty row]
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 4334160-8668320, partition values: [empty row]
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 4334160-8668320, partition values: [empty row]
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 8668320-13002480, partition values: [empty row]
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 8668320-13002480, partition values: [empty row]
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 13002480-13172102, partition values: [empty row]
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 13002480-13149302, partition values: [empty row]
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 4334160-8668320, partition values: [empty row]
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 13002480-13105606, partition values: [empty row]
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 0-4334160, partition values: [empty row]
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 8668320-13002480, partition values: [empty row]
+25/10/26 23:22:01 INFO CodeGenerator: Code generated in 22.453338 ms
+25/10/26 23:22:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 0-4334160, partition values: [empty row]
+25/10/26 23:22:01 INFO CodeGenerator: Code generated in 14.663836 ms
+25/10/26 23:22:01 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:22:01 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:22:01 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/26 23:22:01 INFO BlockManagerInfo: Removed broadcast_13_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 74.2 KiB, free: 434.1 MiB)
+25/10/26 23:22:01 INFO CodeGenerator: Code generated in 12.370654 ms
+25/10/26 23:22:01 INFO CodeGenerator: Code generated in 73.795598 ms
+25/10/26 23:22:01 INFO PythonUDFRunner: Times: total = 258, boot = -1639, init = 1897, finish = 0
+25/10/26 23:22:01 INFO PythonUDFRunner: Times: total = 130, boot = -2233, init = 2363, finish = 0
+25/10/26 23:22:01 INFO CodeGenerator: Code generated in 10.447869 ms
+25/10/26 23:22:01 INFO BlockManagerInfo: Removed broadcast_12_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 34.9 KiB, free: 434.1 MiB)
+25/10/26 23:22:01 INFO CodeGenerator: Code generated in 22.015061 ms
+25/10/26 23:22:01 INFO BlockManagerInfo: Removed broadcast_11_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 6.3 KiB, free: 434.1 MiB)
+25/10/26 23:22:01 INFO BlockManagerInfo: Removed broadcast_14_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 74.2 KiB, free: 434.2 MiB)
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1206, boot = -7201, init = 8407, finish = 0
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1247, boot = -7982, init = 9229, finish = 0
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1419, boot = -5141, init = 6560, finish = 0
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1369, boot = 21, init = 1348, finish = 0
+25/10/26 23:22:02 INFO Executor: Finished task 8.0 in stage 12.0 (TID 89). 3103 bytes result sent to driver
+25/10/26 23:22:02 INFO TaskSetManager: Finished task 8.0 in stage 12.0 (TID 89) in 1532 ms on t6-9.hpc.icm.edu.pl (executor driver) (1/12)
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1459, boot = -6244, init = 7703, finish = 0
+25/10/26 23:22:02 INFO BlockManagerInfo: Removed broadcast_10_piece0 on t6-9.hpc.icm.edu.pl:37991 in memory (size: 23.2 KiB, free: 434.2 MiB)
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1485, boot = -5677, init = 7162, finish = 0
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1388, boot = 31, init = 1357, finish = 0
+25/10/26 23:22:02 INFO Executor: Finished task 9.0 in stage 12.0 (TID 90). 3103 bytes result sent to driver
+25/10/26 23:22:02 INFO TaskSetManager: Finished task 9.0 in stage 12.0 (TID 90) in 1624 ms on t6-9.hpc.icm.edu.pl (executor driver) (2/12)
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1493, boot = 15, init = 1478, finish = 0
+25/10/26 23:22:02 INFO Executor: Finished task 10.0 in stage 12.0 (TID 91). 3103 bytes result sent to driver
+25/10/26 23:22:02 INFO TaskSetManager: Finished task 10.0 in stage 12.0 (TID 91) in 1638 ms on t6-9.hpc.icm.edu.pl (executor driver) (3/12)
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1499, boot = 41, init = 1458, finish = 0
+25/10/26 23:22:02 INFO Executor: Finished task 5.0 in stage 12.0 (TID 86). 3103 bytes result sent to driver
+25/10/26 23:22:02 INFO TaskSetManager: Finished task 5.0 in stage 12.0 (TID 86) in 1652 ms on t6-9.hpc.icm.edu.pl (executor driver) (4/12)
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1593, boot = 8, init = 1584, finish = 1
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1640, boot = 5, init = 1635, finish = 0
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1494, boot = 5, init = 1370, finish = 119
+25/10/26 23:22:02 INFO Executor: Finished task 3.0 in stage 12.0 (TID 84). 3103 bytes result sent to driver
+25/10/26 23:22:02 INFO TaskSetManager: Finished task 3.0 in stage 12.0 (TID 84) in 1727 ms on t6-9.hpc.icm.edu.pl (executor driver) (5/12)
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1518, boot = 21, init = 1497, finish = 0
+25/10/26 23:22:02 INFO Executor: Finished task 6.0 in stage 12.0 (TID 87). 3103 bytes result sent to driver
+25/10/26 23:22:02 INFO TaskSetManager: Finished task 6.0 in stage 12.0 (TID 87) in 1763 ms on t6-9.hpc.icm.edu.pl (executor driver) (6/12)
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1639, boot = 29, init = 1610, finish = 0
+25/10/26 23:22:02 INFO Executor: Finished task 0.0 in stage 12.0 (TID 81). 3103 bytes result sent to driver
+25/10/26 23:22:02 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 81) in 1782 ms on t6-9.hpc.icm.edu.pl (executor driver) (7/12)
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1621, boot = 11, init = 1610, finish = 0
+25/10/26 23:22:02 INFO PythonUDFRunner: Times: total = 1561, boot = 47, init = 1513, finish = 1
+25/10/26 23:22:02 INFO Executor: Finished task 2.0 in stage 12.0 (TID 83). 3103 bytes result sent to driver
+25/10/26 23:22:02 INFO Executor: Finished task 11.0 in stage 12.0 (TID 92). 3103 bytes result sent to driver
+25/10/26 23:22:02 INFO TaskSetManager: Finished task 2.0 in stage 12.0 (TID 83) in 1829 ms on t6-9.hpc.icm.edu.pl (executor driver) (8/12)
+25/10/26 23:22:02 INFO TaskSetManager: Finished task 11.0 in stage 12.0 (TID 92) in 1828 ms on t6-9.hpc.icm.edu.pl (executor driver) (9/12)
+25/10/26 23:22:04 INFO PythonUDFRunner: Times: total = 3000, boot = -1644, init = 1798, finish = 2846
+25/10/26 23:22:05 INFO PythonUDFRunner: Times: total = 4155, boot = -6542, init = 7920, finish = 2777
+25/10/26 23:22:05 INFO PythonUDFRunner: Times: total = 4429, boot = -6441, init = 7953, finish = 2917
+25/10/26 23:22:06 INFO PythonUDFRunner: Times: total = 4942, boot = 25, init = 1678, finish = 3239
+25/10/26 23:22:06 INFO PythonUDFRunner: Times: total = 4767, boot = 36, init = 1591, finish = 3140
+25/10/26 23:22:07 ERROR Executor: Exception in task 4.0 in stage 12.0 (TID 85)
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+25/10/26 23:22:07 INFO PythonUDFRunner: Times: total = 5066, boot = 8, init = 1394, finish = 3664
+25/10/26 23:22:07 ERROR SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[#118,Executor task launch worker for task 4.0 in stage 12.0 (TID 85),5,main]
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+25/10/26 23:22:07 WARN TaskSetManager: Lost task 4.0 in stage 12.0 (TID 85) (t6-9.hpc.icm.edu.pl executor driver): java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+
+25/10/26 23:22:07 ERROR TaskSetManager: Task 4 in stage 12.0 failed 1 times; aborting job
+25/10/26 23:22:07 INFO SparkContext: Invoking stop() from shutdown hook
+25/10/26 23:22:07 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/10/26 23:22:07 INFO TaskSchedulerImpl: Cancelling stage 12
+25/10/26 23:22:07 INFO TaskSchedulerImpl: Killing all running tasks in stage 12: Stage cancelled: Job aborted due to stage failure: Task 4 in stage 12.0 failed 1 times, most recent failure: Lost task 4.0 in stage 12.0 (TID 85) (t6-9.hpc.icm.edu.pl executor driver): java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+
+Driver stacktrace:
+25/10/26 23:22:07 INFO Executor: Executor is trying to kill task 7.0 in stage 12.0 (TID 88), reason: Stage cancelled: Job aborted due to stage failure: Task 4 in stage 12.0 failed 1 times, most recent failure: Lost task 4.0 in stage 12.0 (TID 85) (t6-9.hpc.icm.edu.pl executor driver): java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+
+Driver stacktrace:
+25/10/26 23:22:07 INFO TaskSchedulerImpl: Stage 12 was cancelled
+25/10/26 23:22:07 INFO Executor: Executor is trying to kill task 1.0 in stage 12.0 (TID 82), reason: Stage cancelled: Job aborted due to stage failure: Task 4 in stage 12.0 failed 1 times, most recent failure: Lost task 4.0 in stage 12.0 (TID 85) (t6-9.hpc.icm.edu.pl executor driver): java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+
+Driver stacktrace:
+25/10/26 23:22:07 INFO DAGScheduler: ResultStage 12 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:317) failed in 6.281 s due to Job aborted due to stage failure: Task 4 in stage 12.0 failed 1 times, most recent failure: Lost task 4.0 in stage 12.0 (TID 85) (t6-9.hpc.icm.edu.pl executor driver): java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+
+Driver stacktrace:
+25/10/26 23:22:07 INFO DAGScheduler: Job 9 failed: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:317, took 6.286100 s
+25/10/26 23:22:07 INFO SparkUI: Stopped Spark web UI at http://t6-9.hpc.icm.edu.pl:4040
+25/10/26 23:22:08 ERROR Executor: Exception in task 1.0 in stage 12.0 (TID 82)
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.scheduler.DirectTaskResult.$anonfun$writeExternal$1(TaskResult.scala:60)
+	at org.apache.spark.scheduler.DirectTaskResult$$Lambda/0x00001477f09b3a50.apply$mcV$sp(Unknown Source)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.SparkErrorUtils.tryOrIOException(SparkErrorUtils.scala:35)
+	at org.apache.spark.util.SparkErrorUtils.tryOrIOException$(SparkErrorUtils.scala:33)
+	at org.apache.spark.util.Utils$.tryOrIOException(Utils.scala:94)
+	at org.apache.spark.scheduler.DirectTaskResult.writeExternal(TaskResult.scala:59)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+25/10/26 23:22:08 ERROR Executor: Exception in task 7.0 in stage 12.0 (TID 88)
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+25/10/26 23:22:08 INFO Executor: Not reporting error to driver during JVM shutdown.
+25/10/26 23:22:08 INFO Executor: Not reporting error to driver during JVM shutdown.
+25/10/26 23:22:08 ERROR SparkUncaughtExceptionHandler: [Container in shutdown] Uncaught exception in thread Thread[#109,Executor task launch worker for task 1.0 in stage 12.0 (TID 82),5,main]
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.scheduler.DirectTaskResult.$anonfun$writeExternal$1(TaskResult.scala:60)
+	at org.apache.spark.scheduler.DirectTaskResult$$Lambda/0x00001477f09b3a50.apply$mcV$sp(Unknown Source)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.SparkErrorUtils.tryOrIOException(SparkErrorUtils.scala:35)
+	at org.apache.spark.util.SparkErrorUtils.tryOrIOException$(SparkErrorUtils.scala:33)
+	at org.apache.spark.util.Utils$.tryOrIOException(Utils.scala:94)
+	at org.apache.spark.scheduler.DirectTaskResult.writeExternal(TaskResult.scala:59)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+25/10/26 23:22:08 ERROR SparkUncaughtExceptionHandler: [Container in shutdown] Uncaught exception in thread Thread[#116,Executor task launch worker for task 7.0 in stage 12.0 (TID 88),5,main]
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:71)
+	at java.base/java.nio.ByteBuffer.allocate(ByteBuffer.java:391)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$.$anonfun$serializeToChunkedBuffer$1$adapted(SerializerHelper.scala:40)
+	at org.apache.spark.serializer.SerializerHelper$$$Lambda/0x00001477f09b79f0.apply(Unknown Source)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at java.base/java.io.ObjectOutputStream$BlockDataOutputStream.write(ObjectOutputStream.java:1875)
+	at java.base/java.io.ObjectOutputStream.write(ObjectOutputStream.java:725)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1(Utils.scala:209)
+	at org.apache.spark.util.Utils$.$anonfun$writeByteBuffer$1$adapted(Utils.scala:209)
+	at org.apache.spark.util.Utils$$$Lambda/0x00001477f09b3d38.apply(Unknown Source)
+	at org.apache.spark.util.Utils$.writeByteBufferImpl(Utils.scala:187)
+	at org.apache.spark.util.Utils$.writeByteBuffer(Utils.scala:209)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer.$anonfun$writeExternal$2$adapted(ChunkedByteBuffer.scala:103)
+	at org.apache.spark.util.io.ChunkedByteBuffer$$Lambda/0x00001477f09b8000.apply(Unknown Source)
+	at scala.collection.IndexedSeqOptimized.foreach(IndexedSeqOptimized.scala:36)
+	at scala.collection.IndexedSeqOptimized.foreach$(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:198)
+	at org.apache.spark.util.io.ChunkedByteBuffer.writeExternal(ChunkedByteBuffer.scala:103)
+	at java.base/java.io.ObjectOutputStream.writeExternalData(ObjectOutputStream.java:1478)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1449)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1585)
+	at java.base/java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1542)
+	at java.base/java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1451)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1194)
+	at java.base/java.io.ObjectOutputStream.writeArray(ObjectOutputStream.java:1394)
+	at java.base/java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1190)
+	at java.base/java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:358)
+	at org.apache.spark.serializer.JavaSerializationStream.writeObject(JavaSerializer.scala:46)
+25/10/26 23:22:08 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/10/26 23:22:08 INFO MemoryStore: MemoryStore cleared
+25/10/26 23:22:08 INFO BlockManager: BlockManager stopped
+25/10/26 23:22:08 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/10/26 23:22:08 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/10/26 23:22:08 INFO SparkContext: Successfully stopped SparkContext
+25/10/26 23:22:08 INFO ShutdownHookManager: Shutdown hook called
+25/10/26 23:22:08 INFO ShutdownHookManager: Deleting directory /tmp/spark-85a85b31-9d36-4619-a23e-779269f2ae73
+25/10/26 23:22:08 INFO ShutdownHookManager: Deleting directory /tmp/spark-85a85b31-9d36-4619-a23e-779269f2ae73/pyspark-8395630d-efdf-4ae3-b8d3-3a915e0bac50
+25/10/26 23:22:08 INFO ShutdownHookManager: Deleting directory /tmp/spark-c1f8a4e7-96cd-4a03-8a92-584e85a28c4e
+Command exited with non-zero status 52
+	Command being timed: "spark-submit --executor-cores 12 minhash.py"
+	User time (seconds): 95.77
+	System time (seconds): 4.73
+	Percent of CPU this job got: 336%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 29.86s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6077008
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 568
+	Minor (reclaiming a frame) page faults: 452456
+	Voluntary context switches: 288934
+	Involuntary context switches: 10957
+	Swaps: 0
+	File system inputs: 160912
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 52
+srun: error: t6-9: task 0: Exited with exit code 52
