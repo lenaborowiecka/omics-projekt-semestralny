@@ -4,10 +4,12 @@ from pyspark.sql.types import ArrayType, StringType
 from pyspark.ml.linalg import Vectors, VectorUDT
 from pyspark.ml.feature import MinHashLSH
 from pyspark.sql import functions as F
-from utils.udfs import generate_tripeptides # Zakładam, że ta UDF jest dostępna
+from utils.udfs import generate_tripeptides
+from utils.data_preparation import data_sampler
 import os
 import time
 import json
+from config import DESIRED_SAMPLE_SIZE
 
 # --------------------------------------------------------
 # Inicjalizacja sesji Spark
@@ -32,23 +34,7 @@ step_start = time.time()
 # Cel: MinHash LSH jest wydajny na dużych zbiorach, ale do demonstracji lub testów
 # na mniejszej infrastrukturze nadal bierzemy próbkę. To przyspiesza cały potok.
 
-# Wczytanie zbiorów danych białek Danio (ryba) i Myszy
-danio = spark.read.parquet("./data/danio_protein.adam")
-mysz = spark.read.parquet("./data/mysz_protein.adam")
-
-SEED = 30
-DESIRED_SAMPLE_SIZE = 10000
-SAMPLING_MARGIN = 0.00005
-
-# Obliczamy frakcje potrzebne do pobrania próbek
-danio_count = danio.count()
-mysz_count = mysz.count()
-danio_fraction = (DESIRED_SAMPLE_SIZE / danio_count) + SAMPLING_MARGIN
-mysz_fraction = (DESIRED_SAMPLE_SIZE / mysz_count) + SAMPLING_MARGIN
-
-# Pobieramy próbki dla Danio i Myszy.
-danio_sample = danio.sample(withReplacement=False, fraction=danio_fraction, seed=SEED)
-mysz_sample = mysz.sample(withReplacement=False, fraction=mysz_fraction, seed=SEED)
+danio_sample, mysz_sample = data_sampler(spark, DESIRED_SAMPLE_SIZE)
 
 timing_log["krok_1_wczytanie_i_probkowanie"] = round(time.time() - step_start, 2)
 

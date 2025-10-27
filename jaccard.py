@@ -3,7 +3,9 @@ from pyspark.sql.functions import udf
 from pyspark.sql.types import ArrayType, StringType
 from pyspark.sql import functions as F
 from pyspark.sql.window import Window
-from utils.udfs import generate_tripeptides, compute_jaccard # Zakładam, że te UDF-y są dostępne
+from utils.udfs import generate_tripeptides, compute_jaccard
+from utils.data_preparation import data_sampler
+from config import DESIRED_SAMPLE_SIZE
 import os
 import time
 import json
@@ -28,28 +30,8 @@ start_time_total = time.time()
 # Krok 1: Wczytanie zbiorów danych i pobranie próbek
 # ========================================================
 step_start = time.time()
-# Cel: Wybieramy małe próbki z dużych zbiorów danych, aby znacząco przyspieszyć
-# proces obliczeniowy i umożliwić jego wykonanie w rozsądnym czasie, zamiast
-# przetwarzać miliony rekordów. To uproszczenie jest kluczowe dla testów i analizy pilotażowej.
 
-# Wczytanie zbiorów danych białek Danio (ryba) i Myszy
-danio = spark.read.parquet("./data/danio_protein.adam")
-mysz = spark.read.parquet("./data/mysz_protein.adam")
-
-SEED = 30
-DESIRED_SAMPLE_SIZE = 10000
-SAMPLING_MARGIN = 0.00005
-
-danio_count = danio.count()
-mysz_count = mysz.count()
-# Obliczamy frakcję potrzebną do uzyskania żądanej wielkości próbki, dodając mały margines,
-# aby zwiększyć szanse na osiągnięcie pożądanej liczby rekordów.
-danio_fraction = (DESIRED_SAMPLE_SIZE / danio_count) + SAMPLING_MARGIN
-mysz_fraction = (DESIRED_SAMPLE_SIZE / mysz_count) + SAMPLING_MARGIN
-
-# Pobieramy próbki bez zastępowania, używając stałego SEED dla powtarzalności.
-danio_sample = danio.sample(withReplacement=False, fraction=danio_fraction, seed=SEED)
-mysz_sample = mysz.sample(withReplacement=False, fraction=mysz_fraction, seed=SEED)
+danio_sample, mysz_sample = data_sampler(spark, DESIRED_SAMPLE_SIZE)
 
 timing_log["krok_1_wczytanie_i_probkowanie"] = round(time.time() - step_start, 2)
 
