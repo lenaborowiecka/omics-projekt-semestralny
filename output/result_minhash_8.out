@@ -1,7 +1,6 @@
 ==========================================
-SLURM_JOB_ID = 8398805
-SLURM_JOB_NODELIST = t1-4
+SLURM_JOB_ID = 8400423
+SLURM_JOB_NODELIST = t15-3
 ==========================================
 Całkowita liczba unikalnych trójpeptydów: 8100
 ********** 10 Najlepszych Przybliżonych Podobieństw Białek **********
-[29.050s][warning][gc,alloc] Executor task launch worker for task 5.0 in stage 12.0 (TID 62): Retried waiting for GCLocker too often allocating 131074 words

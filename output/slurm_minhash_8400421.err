@@ -1,0 +1,857 @@
+INFO:    Using cached SIF image
+ps: invalid option -- 'p'
+BusyBox v1.36.1 (2023-10-17 11:19:33 UTC) multi-call binary.
+
+Usage: ps [-o COL1,COL2=HEADER] [-T]
+
+Show list of processes
+
+	-o COL1,COL2=HEADER	Select columns for display
+	-T			Show threads
+25/10/27 17:41:51 INFO SparkContext: Running Spark version 3.5.0
+25/10/27 17:41:51 INFO SparkContext: OS info Linux, 5.14.0-503.19.1.el9_5.x86_64, amd64
+25/10/27 17:41:51 INFO SparkContext: Java version 21.0.1-internal
+25/10/27 17:41:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/10/27 17:41:51 INFO ResourceUtils: ==============================================================
+25/10/27 17:41:51 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/10/27 17:41:51 INFO ResourceUtils: ==============================================================
+25/10/27 17:41:51 INFO SparkContext: Submitted application: Protein MinHash Similarity
+25/10/27 17:41:51 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/10/27 17:41:51 INFO ResourceProfile: Limiting resource is cpu
+25/10/27 17:41:51 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/10/27 17:41:51 INFO SecurityManager: Changing view acls to: lboro
+25/10/27 17:41:51 INFO SecurityManager: Changing modify acls to: lboro
+25/10/27 17:41:51 INFO SecurityManager: Changing view acls groups to: 
+25/10/27 17:41:51 INFO SecurityManager: Changing modify acls groups to: 
+25/10/27 17:41:51 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: lboro; groups with view permissions: EMPTY; users with modify permissions: lboro; groups with modify permissions: EMPTY
+25/10/27 17:41:52 INFO Utils: Successfully started service 'sparkDriver' on port 33001.
+25/10/27 17:41:52 INFO SparkEnv: Registering MapOutputTracker
+25/10/27 17:41:52 INFO SparkEnv: Registering BlockManagerMaster
+25/10/27 17:41:52 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/10/27 17:41:52 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/10/27 17:41:52 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/10/27 17:41:52 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-b2a47991-160f-4d3a-8362-957e88c697a9
+25/10/27 17:41:52 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+25/10/27 17:41:52 INFO SparkEnv: Registering OutputCommitCoordinator
+25/10/27 17:41:52 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/10/27 17:41:53 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/10/27 17:41:53 INFO Executor: Starting executor ID driver on host t1-5.hpc.icm.edu.pl
+25/10/27 17:41:53 INFO Executor: OS info Linux, 5.14.0-503.19.1.el9_5.x86_64, amd64
+25/10/27 17:41:53 INFO Executor: Java version 21.0.1-internal
+25/10/27 17:41:53 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/10/27 17:41:53 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@e83f860 for default.
+25/10/27 17:41:53 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33915.
+25/10/27 17:41:53 INFO NettyBlockTransferService: Server created on t1-5.hpc.icm.edu.pl:33915
+25/10/27 17:41:53 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/10/27 17:41:53 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, t1-5.hpc.icm.edu.pl, 33915, None)
+25/10/27 17:41:53 INFO BlockManagerMasterEndpoint: Registering block manager t1-5.hpc.icm.edu.pl:33915 with 413.9 MiB RAM, BlockManagerId(driver, t1-5.hpc.icm.edu.pl, 33915, None)
+25/10/27 17:41:53 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, t1-5.hpc.icm.edu.pl, 33915, None)
+25/10/27 17:41:53 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, t1-5.hpc.icm.edu.pl, 33915, None)
+25/10/27 17:41:54 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/10/27 17:41:54 INFO SharedState: Warehouse path is 'file:/lu/topola/home/lboro/omics-projekt-semestralny/spark-warehouse'.
+25/10/27 17:41:55 INFO InMemoryFileIndex: It took 134 ms to list leaf files for 1 paths.
+25/10/27 17:41:56 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+25/10/27 17:41:56 INFO DAGScheduler: Got job 0 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:41:56 INFO DAGScheduler: Final stage: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0)
+25/10/27 17:41:56 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:41:56 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:41:56 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:41:56 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 103.2 KiB, free 413.8 MiB)
+25/10/27 17:41:57 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 37.1 KiB, free 413.8 MiB)
+25/10/27 17:41:57 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 37.1 KiB, free: 413.9 MiB)
+25/10/27 17:41:57 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:41:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:41:57 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+25/10/27 17:41:57 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 7803 bytes) 
+25/10/27 17:41:57 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+25/10/27 17:41:57 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2876 bytes result sent to driver
+25/10/27 17:41:57 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 853 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:41:57 INFO DAGScheduler: ResultStage 0 (parquet at NativeMethodAccessorImpl.java:0) finished in 1.158 s
+25/10/27 17:41:58 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:41:58 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+25/10/27 17:41:58 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+25/10/27 17:41:58 INFO DAGScheduler: Job 0 finished: parquet at NativeMethodAccessorImpl.java:0, took 1.270270 s
+25/10/27 17:41:59 INFO InMemoryFileIndex: It took 38 ms to list leaf files for 1 paths.
+25/10/27 17:41:59 INFO SparkContext: Starting job: parquet at NativeMethodAccessorImpl.java:0
+25/10/27 17:41:59 INFO DAGScheduler: Got job 1 (parquet at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:41:59 INFO DAGScheduler: Final stage: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0)
+25/10/27 17:41:59 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:41:59 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:41:59 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at parquet at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:41:59 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 103.2 KiB, free 413.7 MiB)
+25/10/27 17:41:59 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 37.1 KiB, free 413.7 MiB)
+25/10/27 17:41:59 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 37.1 KiB, free: 413.9 MiB)
+25/10/27 17:41:59 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:41:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at parquet at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:41:59 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+25/10/27 17:41:59 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 7802 bytes) 
+25/10/27 17:41:59 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+25/10/27 17:41:59 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2833 bytes result sent to driver
+25/10/27 17:41:59 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 86 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:41:59 INFO DAGScheduler: ResultStage 1 (parquet at NativeMethodAccessorImpl.java:0) finished in 0.119 s
+25/10/27 17:41:59 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:41:59 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+25/10/27 17:41:59 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+25/10/27 17:41:59 INFO DAGScheduler: Job 1 finished: parquet at NativeMethodAccessorImpl.java:0, took 0.126964 s
+25/10/27 17:42:00 INFO FileSourceStrategy: Pushed Filters: 
+25/10/27 17:42:00 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/27 17:42:01 INFO CodeGenerator: Code generated in 402.699996 ms
+25/10/27 17:42:01 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 200.7 KiB, free 413.5 MiB)
+25/10/27 17:42:01 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.7 KiB, free 413.4 MiB)
+25/10/27 17:42:01 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 34.7 KiB, free: 413.8 MiB)
+25/10/27 17:42:01 INFO SparkContext: Created broadcast 2 from count at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:01 INFO FileSourceScanExec: Planning scan with bin packing, max size: 55341818 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/27 17:42:01 INFO DAGScheduler: Registering RDD 7 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+25/10/27 17:42:01 INFO DAGScheduler: Got map stage job 2 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:01 INFO DAGScheduler: Final stage: ShuffleMapStage 2 (count at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:01 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:01 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:01 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[7] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:01 INFO BlockManagerInfo: Removed broadcast_0_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 37.1 KiB, free: 413.9 MiB)
+25/10/27 17:42:01 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 16.8 KiB, free 413.5 MiB)
+25/10/27 17:42:01 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 7.7 KiB, free 413.5 MiB)
+25/10/27 17:42:01 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 7.7 KiB, free: 413.8 MiB)
+25/10/27 17:42:01 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:01 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[7] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:01 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+25/10/27 17:42:01 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8587 bytes) 
+25/10/27 17:42:01 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+25/10/27 17:42:01 INFO BlockManagerInfo: Removed broadcast_1_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 37.1 KiB, free: 413.9 MiB)
+25/10/27 17:42:01 INFO CodeGenerator: Code generated in 39.122098 ms
+25/10/27 17:42:01 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 0-14311938, partition values: [empty row]
+25/10/27 17:42:02 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 0-14288646, partition values: [empty row]
+25/10/27 17:42:02 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 0-14158322, partition values: [empty row]
+25/10/27 17:42:02 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 2186 bytes result sent to driver
+25/10/27 17:42:02 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 428 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:02 INFO DAGScheduler: ShuffleMapStage 2 (count at NativeMethodAccessorImpl.java:0) finished in 0.510 s
+25/10/27 17:42:02 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:42:02 INFO DAGScheduler: running: Set()
+25/10/27 17:42:02 INFO DAGScheduler: waiting: Set()
+25/10/27 17:42:02 INFO DAGScheduler: failed: Set()
+25/10/27 17:42:02 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+25/10/27 17:42:02 INFO CodeGenerator: Code generated in 40.926361 ms
+25/10/27 17:42:02 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:02 INFO DAGScheduler: Got job 3 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:02 INFO DAGScheduler: Final stage: ResultStage 4 (count at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:02 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+25/10/27 17:42:02 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:02 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[10] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:02 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 12.5 KiB, free 413.7 MiB)
+25/10/27 17:42:02 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 413.7 MiB)
+25/10/27 17:42:02 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 5.9 KiB, free: 413.9 MiB)
+25/10/27 17:42:02 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:02 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[10] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:02 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+25/10/27 17:42:02 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 3) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+25/10/27 17:42:02 INFO Executor: Running task 0.0 in stage 4.0 (TID 3)
+25/10/27 17:42:02 INFO ShuffleBlockFetcherIterator: Getting 1 (60.0 B) non-empty blocks including 1 (60.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:42:02 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 19 ms
+25/10/27 17:42:02 INFO CodeGenerator: Code generated in 35.412169 ms
+25/10/27 17:42:02 INFO Executor: Finished task 0.0 in stage 4.0 (TID 3). 4038 bytes result sent to driver
+25/10/27 17:42:02 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 3) in 128 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:02 INFO DAGScheduler: ResultStage 4 (count at NativeMethodAccessorImpl.java:0) finished in 0.143 s
+25/10/27 17:42:02 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:42:02 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+25/10/27 17:42:02 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+25/10/27 17:42:02 INFO DAGScheduler: Job 3 finished: count at NativeMethodAccessorImpl.java:0, took 0.159331 s
+25/10/27 17:42:02 INFO FileSourceStrategy: Pushed Filters: 
+25/10/27 17:42:02 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/27 17:42:02 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 200.7 KiB, free 413.5 MiB)
+25/10/27 17:42:02 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 34.7 KiB, free 413.4 MiB)
+25/10/27 17:42:02 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 34.7 KiB, free: 413.8 MiB)
+25/10/27 17:42:02 INFO SparkContext: Created broadcast 5 from count at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:02 INFO FileSourceScanExec: Planning scan with bin packing, max size: 52009922 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/27 17:42:02 INFO DAGScheduler: Registering RDD 14 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 1
+25/10/27 17:42:02 INFO DAGScheduler: Got map stage job 4 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:02 INFO DAGScheduler: Final stage: ShuffleMapStage 5 (count at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:02 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:02 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:02 INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[14] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:02 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 16.8 KiB, free 413.4 MiB)
+25/10/27 17:42:02 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 7.7 KiB, free 413.4 MiB)
+25/10/27 17:42:02 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 7.7 KiB, free: 413.8 MiB)
+25/10/27 17:42:02 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:02 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[14] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:02 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks resource profile 0
+25/10/27 17:42:02 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 4) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8584 bytes) 
+25/10/27 17:42:02 INFO Executor: Running task 0.0 in stage 5.0 (TID 4)
+25/10/27 17:42:02 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 0-13172102, partition values: [empty row]
+25/10/27 17:42:02 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 0-13149302, partition values: [empty row]
+25/10/27 17:42:02 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 0-13105606, partition values: [empty row]
+25/10/27 17:42:02 INFO Executor: Finished task 0.0 in stage 5.0 (TID 4). 2143 bytes result sent to driver
+25/10/27 17:42:02 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 4) in 92 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:02 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+25/10/27 17:42:02 INFO DAGScheduler: ShuffleMapStage 5 (count at NativeMethodAccessorImpl.java:0) finished in 0.104 s
+25/10/27 17:42:02 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:42:02 INFO DAGScheduler: running: Set()
+25/10/27 17:42:02 INFO DAGScheduler: waiting: Set()
+25/10/27 17:42:02 INFO DAGScheduler: failed: Set()
+25/10/27 17:42:02 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:02 INFO DAGScheduler: Got job 5 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:02 INFO DAGScheduler: Final stage: ResultStage 7 (count at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:02 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 6)
+25/10/27 17:42:02 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:02 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[17] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:02 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 12.5 KiB, free 413.4 MiB)
+25/10/27 17:42:02 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 413.4 MiB)
+25/10/27 17:42:02 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 5.9 KiB, free: 413.8 MiB)
+25/10/27 17:42:02 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:02 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[17] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:02 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks resource profile 0
+25/10/27 17:42:02 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 5) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+25/10/27 17:42:02 INFO Executor: Running task 0.0 in stage 7.0 (TID 5)
+25/10/27 17:42:02 INFO ShuffleBlockFetcherIterator: Getting 1 (60.0 B) non-empty blocks including 1 (60.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:42:02 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/10/27 17:42:02 INFO Executor: Finished task 0.0 in stage 7.0 (TID 5). 3995 bytes result sent to driver
+25/10/27 17:42:02 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 5) in 17 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:02 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+25/10/27 17:42:02 INFO DAGScheduler: ResultStage 7 (count at NativeMethodAccessorImpl.java:0) finished in 0.028 s
+25/10/27 17:42:02 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:42:02 INFO TaskSchedulerImpl: Killing all running tasks in stage 7: Stage finished
+25/10/27 17:42:02 INFO DAGScheduler: Job 5 finished: count at NativeMethodAccessorImpl.java:0, took 0.039047 s
+25/10/27 17:42:03 INFO FileSourceStrategy: Pushed Filters: 
+25/10/27 17:42:03 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/27 17:42:03 INFO FileSourceStrategy: Pushed Filters: 
+25/10/27 17:42:03 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/27 17:42:03 INFO CodeGenerator: Code generated in 54.140592 ms
+25/10/27 17:42:03 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 200.9 KiB, free 413.2 MiB)
+25/10/27 17:42:03 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 413.2 MiB)
+25/10/27 17:42:03 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 34.9 KiB, free: 413.8 MiB)
+25/10/27 17:42:03 INFO SparkContext: Created broadcast 8 from javaToPython at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:03 INFO FileSourceScanExec: Planning scan with bin packing, max size: 55341818 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/27 17:42:03 INFO CodeGenerator: Code generated in 39.495471 ms
+25/10/27 17:42:03 INFO SparkContext: Starting job: javaToPython at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:03 INFO DAGScheduler: Got job 6 (javaToPython at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:03 INFO DAGScheduler: Final stage: ResultStage 8 (javaToPython at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:03 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:03 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:03 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[23] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:03 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 18.2 KiB, free 413.1 MiB)
+25/10/27 17:42:03 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 7.9 KiB, free 413.1 MiB)
+25/10/27 17:42:03 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 7.9 KiB, free: 413.8 MiB)
+25/10/27 17:42:03 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:03 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[23] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:03 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks resource profile 0
+25/10/27 17:42:03 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 6) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8598 bytes) 
+25/10/27 17:42:03 INFO Executor: Running task 0.0 in stage 8.0 (TID 6)
+25/10/27 17:42:03 INFO CodeGenerator: Code generated in 29.659098 ms
+25/10/27 17:42:03 INFO CodeGenerator: Code generated in 32.096156 ms
+25/10/27 17:42:03 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 0-14311938, partition values: [empty row]
+25/10/27 17:42:04 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:04 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 0-14288646, partition values: [empty row]
+25/10/27 17:42:04 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:05 INFO BlockManagerInfo: Removed broadcast_6_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 7.7 KiB, free: 413.8 MiB)
+25/10/27 17:42:05 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 0-14158322, partition values: [empty row]
+25/10/27 17:42:05 INFO BlockManagerInfo: Removed broadcast_4_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 5.9 KiB, free: 413.8 MiB)
+25/10/27 17:42:05 INFO BlockManagerInfo: Removed broadcast_5_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 34.7 KiB, free: 413.8 MiB)
+25/10/27 17:42:05 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:05 INFO BlockManagerInfo: Removed broadcast_3_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 7.7 KiB, free: 413.8 MiB)
+25/10/27 17:42:05 INFO BlockManagerInfo: Removed broadcast_7_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 5.9 KiB, free: 413.8 MiB)
+25/10/27 17:42:05 INFO Executor: Finished task 0.0 in stage 8.0 (TID 6). 494447 bytes result sent to driver
+25/10/27 17:42:05 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 6) in 1805 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:05 INFO DAGScheduler: ResultStage 8 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 1.817 s
+25/10/27 17:42:05 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:42:05 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+25/10/27 17:42:05 INFO TaskSchedulerImpl: Killing all running tasks in stage 8: Stage finished
+25/10/27 17:42:05 INFO DAGScheduler: Job 6 finished: javaToPython at NativeMethodAccessorImpl.java:0, took 1.825202 s
+25/10/27 17:42:05 INFO DAGScheduler: Registering RDD 24 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 2
+25/10/27 17:42:05 INFO DAGScheduler: Got map stage job 7 (javaToPython at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:05 INFO DAGScheduler: Final stage: ShuffleMapStage 9 (javaToPython at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:05 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:05 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:05 INFO DAGScheduler: Submitting ShuffleMapStage 9 (MapPartitionsRDD[24] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:05 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 29.7 KiB, free 413.4 MiB)
+25/10/27 17:42:05 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 10.7 KiB, free 413.4 MiB)
+25/10/27 17:42:05 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 10.7 KiB, free: 413.8 MiB)
+25/10/27 17:42:05 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:05 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[24] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:05 INFO TaskSchedulerImpl: Adding task set 9.0 with 1 tasks resource profile 0
+25/10/27 17:42:05 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 7) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8587 bytes) 
+25/10/27 17:42:05 INFO Executor: Running task 0.0 in stage 9.0 (TID 7)
+25/10/27 17:42:05 INFO CodeGenerator: Code generated in 17.23378 ms
+25/10/27 17:42:05 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 0-14311938, partition values: [empty row]
+25/10/27 17:42:05 INFO CodeGenerator: Code generated in 41.441092 ms
+25/10/27 17:42:05 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 200.9 KiB, free 413.2 MiB)
+25/10/27 17:42:05 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 413.2 MiB)
+25/10/27 17:42:05 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 34.9 KiB, free: 413.8 MiB)
+25/10/27 17:42:05 INFO SparkContext: Created broadcast 11 from javaToPython at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:05 INFO FileSourceScanExec: Planning scan with bin packing, max size: 52009922 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/27 17:42:05 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:05 INFO SparkContext: Starting job: javaToPython at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:05 INFO DAGScheduler: Got job 8 (javaToPython at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:05 INFO DAGScheduler: Final stage: ResultStage 10 (javaToPython at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:05 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:05 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:05 INFO DAGScheduler: Submitting ResultStage 10 (MapPartitionsRDD[30] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:05 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 18.2 KiB, free 413.2 MiB)
+25/10/27 17:42:05 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 7.8 KiB, free 413.1 MiB)
+25/10/27 17:42:05 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 7.8 KiB, free: 413.8 MiB)
+25/10/27 17:42:05 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[30] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:05 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks resource profile 0
+25/10/27 17:42:06 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 0-14288646, partition values: [empty row]
+25/10/27 17:42:06 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:06 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 0-14158322, partition values: [empty row]
+25/10/27 17:42:06 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:07 INFO Executor: Finished task 0.0 in stage 9.0 (TID 7). 2303 bytes result sent to driver
+25/10/27 17:42:07 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 8) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8595 bytes) 
+25/10/27 17:42:07 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 7) in 1398 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:07 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+25/10/27 17:42:07 INFO DAGScheduler: ShuffleMapStage 9 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 1.417 s
+25/10/27 17:42:07 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:42:07 INFO DAGScheduler: running: Set(ResultStage 10)
+25/10/27 17:42:07 INFO DAGScheduler: waiting: Set()
+25/10/27 17:42:07 INFO DAGScheduler: failed: Set()
+25/10/27 17:42:07 INFO Executor: Running task 0.0 in stage 10.0 (TID 8)
+25/10/27 17:42:07 INFO CodeGenerator: Code generated in 60.78424 ms
+25/10/27 17:42:07 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 0-13172102, partition values: [empty row]
+25/10/27 17:42:07 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:07 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 0-13149302, partition values: [empty row]
+25/10/27 17:42:07 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:07 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 0-13105606, partition values: [empty row]
+25/10/27 17:42:08 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:08 INFO Executor: Finished task 0.0 in stage 10.0 (TID 8). 490567 bytes result sent to driver
+25/10/27 17:42:08 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 8) in 1118 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:08 INFO DAGScheduler: ResultStage 10 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 2.300 s
+25/10/27 17:42:08 INFO DAGScheduler: Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:42:08 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+25/10/27 17:42:08 INFO TaskSchedulerImpl: Killing all running tasks in stage 10: Stage finished
+25/10/27 17:42:08 INFO DAGScheduler: Job 8 finished: javaToPython at NativeMethodAccessorImpl.java:0, took 2.309897 s
+25/10/27 17:42:08 INFO DAGScheduler: Registering RDD 31 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 3
+25/10/27 17:42:08 INFO DAGScheduler: Got map stage job 9 (javaToPython at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:08 INFO DAGScheduler: Final stage: ShuffleMapStage 11 (javaToPython at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:08 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:08 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:08 INFO DAGScheduler: Submitting ShuffleMapStage 11 (MapPartitionsRDD[31] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:08 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 29.7 KiB, free 413.1 MiB)
+25/10/27 17:42:08 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 10.7 KiB, free 413.1 MiB)
+25/10/27 17:42:08 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 10.7 KiB, free: 413.8 MiB)
+25/10/27 17:42:08 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:08 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[31] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:08 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks resource profile 0
+25/10/27 17:42:08 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 9) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8584 bytes) 
+25/10/27 17:42:08 INFO Executor: Running task 0.0 in stage 11.0 (TID 9)
+25/10/27 17:42:08 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 0-13172102, partition values: [empty row]
+25/10/27 17:42:08 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:08 INFO ShufflePartitionsUtil: For shuffle(2), advisory target size: 67108864, actual target size 6829868, minimum partition size: 1048576
+25/10/27 17:42:08 INFO CodeGenerator: Code generated in 61.904317 ms
+25/10/27 17:42:08 INFO CodeGenerator: Code generated in 54.999842 ms
+25/10/27 17:42:08 INFO DAGScheduler: Registering RDD 37 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 4
+25/10/27 17:42:08 INFO DAGScheduler: Got map stage job 10 (javaToPython at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:08 INFO DAGScheduler: Final stage: ShuffleMapStage 13 (javaToPython at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:08 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 12)
+25/10/27 17:42:08 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:08 INFO DAGScheduler: Submitting ShuffleMapStage 13 (MapPartitionsRDD[37] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:08 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 37.1 KiB, free 413.1 MiB)
+25/10/27 17:42:08 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 17.5 KiB, free 413.1 MiB)
+25/10/27 17:42:08 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 17.5 KiB, free: 413.8 MiB)
+25/10/27 17:42:08 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:08 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 13 (MapPartitionsRDD[37] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:08 INFO TaskSchedulerImpl: Adding task set 13.0 with 1 tasks resource profile 0
+25/10/27 17:42:08 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 0-13149302, partition values: [empty row]
+25/10/27 17:42:09 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:09 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 0-13105606, partition values: [empty row]
+25/10/27 17:42:09 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:09 INFO Executor: Finished task 0.0 in stage 11.0 (TID 9). 2260 bytes result sent to driver
+25/10/27 17:42:09 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 10) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7604 bytes) 
+25/10/27 17:42:09 INFO Executor: Running task 0.0 in stage 13.0 (TID 10)
+25/10/27 17:42:09 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 9) in 1597 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:09 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+25/10/27 17:42:09 INFO DAGScheduler: ShuffleMapStage 11 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 1.606 s
+25/10/27 17:42:09 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:42:09 INFO DAGScheduler: running: Set(ShuffleMapStage 13)
+25/10/27 17:42:09 INFO DAGScheduler: waiting: Set()
+25/10/27 17:42:09 INFO DAGScheduler: failed: Set()
+25/10/27 17:42:09 INFO ShuffleBlockFetcherIterator: Getting 1 (6.5 MiB) non-empty blocks including 1 (6.5 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:42:09 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 11 ms
+25/10/27 17:42:09 INFO ShufflePartitionsUtil: For shuffle(3), advisory target size: 67108864, actual target size 6158676, minimum partition size: 1048576
+25/10/27 17:42:09 INFO CodeGenerator: Code generated in 36.176342 ms
+25/10/27 17:42:09 INFO CodeGenerator: Code generated in 41.813579 ms
+25/10/27 17:42:10 INFO CodeGenerator: Code generated in 10.703547 ms
+25/10/27 17:42:10 INFO CodeGenerator: Code generated in 46.716913 ms
+25/10/27 17:42:10 INFO DAGScheduler: Registering RDD 43 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 5
+25/10/27 17:42:10 INFO DAGScheduler: Got map stage job 11 (javaToPython at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:10 INFO DAGScheduler: Final stage: ShuffleMapStage 15 (javaToPython at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:10 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 14)
+25/10/27 17:42:10 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:10 INFO DAGScheduler: Submitting ShuffleMapStage 15 (MapPartitionsRDD[43] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:10 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 37.2 KiB, free 413.0 MiB)
+25/10/27 17:42:10 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 17.5 KiB, free 412.9 MiB)
+25/10/27 17:42:10 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 17.5 KiB, free: 413.8 MiB)
+25/10/27 17:42:10 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:10 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 15 (MapPartitionsRDD[43] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:10 INFO TaskSchedulerImpl: Adding task set 15.0 with 1 tasks resource profile 0
+25/10/27 17:42:10 INFO CodeGenerator: Code generated in 5.22119 ms
+25/10/27 17:42:11 INFO CodeGenerator: Code generated in 29.539436 ms
+25/10/27 17:42:11 INFO CodeGenerator: Code generated in 29.289594 ms
+25/10/27 17:42:11 INFO BlockManagerInfo: Removed broadcast_13_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 10.7 KiB, free: 413.8 MiB)
+25/10/27 17:42:17 INFO Executor: Finished task 0.0 in stage 13.0 (TID 10). 5671 bytes result sent to driver
+25/10/27 17:42:17 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 11) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7604 bytes) 
+25/10/27 17:42:17 INFO Executor: Running task 0.0 in stage 15.0 (TID 11)
+25/10/27 17:42:17 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 10) in 7414 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:17 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+25/10/27 17:42:17 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 47109
+25/10/27 17:42:17 INFO DAGScheduler: ShuffleMapStage 13 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 8.534 s
+25/10/27 17:42:17 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:42:17 INFO DAGScheduler: running: Set(ShuffleMapStage 15)
+25/10/27 17:42:17 INFO DAGScheduler: waiting: Set()
+25/10/27 17:42:17 INFO DAGScheduler: failed: Set()
+25/10/27 17:42:17 INFO ShuffleBlockFetcherIterator: Getting 1 (5.9 MiB) non-empty blocks including 1 (5.9 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:42:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 9 ms
+25/10/27 17:42:17 INFO CodeGenerator: Code generated in 39.680562 ms
+25/10/27 17:42:17 INFO CodeGenerator: Code generated in 10.511531 ms
+25/10/27 17:42:21 INFO PythonUDFRunner: Times: total = 3533, boot = 17, init = 244, finish = 3272
+25/10/27 17:42:21 INFO Executor: Finished task 0.0 in stage 15.0 (TID 11). 5714 bytes result sent to driver
+25/10/27 17:42:21 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 11) in 4179 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:21 INFO TaskSchedulerImpl: Removed TaskSet 15.0, whose tasks have all completed, from pool 
+25/10/27 17:42:21 INFO DAGScheduler: ShuffleMapStage 15 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 11.386 s
+25/10/27 17:42:21 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:42:21 INFO DAGScheduler: running: Set()
+25/10/27 17:42:21 INFO DAGScheduler: waiting: Set()
+25/10/27 17:42:21 INFO DAGScheduler: failed: Set()
+25/10/27 17:42:21 INFO CodeGenerator: Code generated in 17.60362 ms
+25/10/27 17:42:21 INFO SparkContext: Starting job: collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79
+25/10/27 17:42:21 INFO DAGScheduler: Registering RDD 52 (distinct at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79) as input to shuffle 6
+25/10/27 17:42:21 INFO DAGScheduler: Got job 12 (collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79) with 2 output partitions
+25/10/27 17:42:21 INFO DAGScheduler: Final stage: ResultStage 21 (collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79)
+25/10/27 17:42:21 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 20)
+25/10/27 17:42:21 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 20)
+25/10/27 17:42:21 INFO DAGScheduler: Submitting ShuffleMapStage 20 (PairwiseRDD[52] at distinct at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79), which has no missing parents
+25/10/27 17:42:21 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 26.6 KiB, free 413.0 MiB)
+25/10/27 17:42:21 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 13.3 KiB, free 413.0 MiB)
+25/10/27 17:42:21 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 13.3 KiB, free: 413.7 MiB)
+25/10/27 17:42:21 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:21 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 20 (PairwiseRDD[52] at distinct at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79) (first 15 tasks are for partitions Vector(0, 1))
+25/10/27 17:42:21 INFO TaskSchedulerImpl: Adding task set 20.0 with 2 tasks resource profile 0
+25/10/27 17:42:21 INFO TaskSetManager: Starting task 0.0 in stage 20.0 (TID 12) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7713 bytes) 
+25/10/27 17:42:21 INFO Executor: Running task 0.0 in stage 20.0 (TID 12)
+25/10/27 17:42:21 INFO ShuffleBlockFetcherIterator: Getting 1 (52.5 MiB) non-empty blocks including 1 (52.5 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:42:21 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/10/27 17:42:34 INFO PythonRunner: Times: total = 12852, boot = 1137, init = 257, finish = 11458
+25/10/27 17:42:34 INFO Executor: Finished task 0.0 in stage 20.0 (TID 12). 5410 bytes result sent to driver
+25/10/27 17:42:34 INFO TaskSetManager: Starting task 1.0 in stage 20.0 (TID 13) (t1-5.hpc.icm.edu.pl, executor driver, partition 1, NODE_LOCAL, 7713 bytes) 
+25/10/27 17:42:34 INFO Executor: Running task 1.0 in stage 20.0 (TID 13)
+25/10/27 17:42:34 INFO TaskSetManager: Finished task 0.0 in stage 20.0 (TID 12) in 13188 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/2)
+25/10/27 17:42:34 INFO ShuffleBlockFetcherIterator: Getting 1 (43.4 MiB) non-empty blocks including 1 (43.4 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:42:34 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/10/27 17:42:34 INFO CodeGenerator: Code generated in 11.614855 ms
+25/10/27 17:42:43 INFO PythonRunner: Times: total = 8962, boot = -312, init = 477, finish = 8797
+25/10/27 17:42:43 INFO Executor: Finished task 1.0 in stage 20.0 (TID 13). 5410 bytes result sent to driver
+25/10/27 17:42:43 INFO TaskSetManager: Finished task 1.0 in stage 20.0 (TID 13) in 9017 ms on t1-5.hpc.icm.edu.pl (executor driver) (2/2)
+25/10/27 17:42:43 INFO TaskSchedulerImpl: Removed TaskSet 20.0, whose tasks have all completed, from pool 
+25/10/27 17:42:43 INFO DAGScheduler: ShuffleMapStage 20 (distinct at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79) finished in 22.218 s
+25/10/27 17:42:43 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:42:43 INFO DAGScheduler: running: Set()
+25/10/27 17:42:43 INFO DAGScheduler: waiting: Set(ResultStage 21)
+25/10/27 17:42:43 INFO DAGScheduler: failed: Set()
+25/10/27 17:42:43 INFO DAGScheduler: Submitting ResultStage 21 (PythonRDD[55] at collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79), which has no missing parents
+25/10/27 17:42:43 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 10.7 KiB, free 413.0 MiB)
+25/10/27 17:42:43 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 6.3 KiB, free 413.0 MiB)
+25/10/27 17:42:43 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 6.3 KiB, free: 413.7 MiB)
+25/10/27 17:42:43 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:43 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 21 (PythonRDD[55] at collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79) (first 15 tasks are for partitions Vector(0, 1))
+25/10/27 17:42:43 INFO TaskSchedulerImpl: Adding task set 21.0 with 2 tasks resource profile 0
+25/10/27 17:42:43 INFO TaskSetManager: Starting task 0.0 in stage 21.0 (TID 14) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7433 bytes) 
+25/10/27 17:42:43 INFO Executor: Running task 0.0 in stage 21.0 (TID 14)
+25/10/27 17:42:43 INFO ShuffleBlockFetcherIterator: Getting 2 (34.2 KiB) non-empty blocks including 2 (34.2 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:42:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 10 ms
+25/10/27 17:42:44 INFO PythonRunner: Times: total = 126, boot = -2, init = 121, finish = 7
+25/10/27 17:42:44 INFO Executor: Finished task 0.0 in stage 21.0 (TID 14). 26890 bytes result sent to driver
+25/10/27 17:42:44 INFO TaskSetManager: Starting task 1.0 in stage 21.0 (TID 15) (t1-5.hpc.icm.edu.pl, executor driver, partition 1, NODE_LOCAL, 7433 bytes) 
+25/10/27 17:42:44 INFO TaskSetManager: Finished task 0.0 in stage 21.0 (TID 14) in 163 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/2)
+25/10/27 17:42:44 INFO Executor: Running task 1.0 in stage 21.0 (TID 15)
+25/10/27 17:42:44 INFO ShuffleBlockFetcherIterator: Getting 2 (35.8 KiB) non-empty blocks including 2 (35.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:42:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+25/10/27 17:42:44 INFO PythonRunner: Times: total = 88, boot = 9, init = 72, finish = 7
+25/10/27 17:42:44 INFO Executor: Finished task 1.0 in stage 21.0 (TID 15). 27111 bytes result sent to driver
+25/10/27 17:42:44 INFO TaskSetManager: Finished task 1.0 in stage 21.0 (TID 15) in 121 ms on t1-5.hpc.icm.edu.pl (executor driver) (2/2)
+25/10/27 17:42:44 INFO TaskSchedulerImpl: Removed TaskSet 21.0, whose tasks have all completed, from pool 
+25/10/27 17:42:44 INFO DAGScheduler: ResultStage 21 (collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79) finished in 0.297 s
+25/10/27 17:42:44 INFO DAGScheduler: Job 12 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:42:44 INFO TaskSchedulerImpl: Killing all running tasks in stage 21: Stage finished
+25/10/27 17:42:44 INFO DAGScheduler: Job 12 finished: collect at /lu/topola/home/lboro/omics-projekt-semestralny/minhash.py:79, took 22.530922 s
+25/10/27 17:42:44 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 208.0 B, free 413.0 MiB)
+25/10/27 17:42:44 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 59.3 KiB, free 412.9 MiB)
+25/10/27 17:42:44 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 59.3 KiB, free: 413.7 MiB)
+25/10/27 17:42:44 INFO SparkContext: Created broadcast 18 from broadcast at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:44 INFO FileSourceStrategy: Pushed Filters: 
+25/10/27 17:42:44 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/27 17:42:44 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 200.9 KiB, free 412.7 MiB)
+25/10/27 17:42:44 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 412.7 MiB)
+25/10/27 17:42:44 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 34.9 KiB, free: 413.7 MiB)
+25/10/27 17:42:44 INFO SparkContext: Created broadcast 19 from head at DatasetUtils.scala:218
+25/10/27 17:42:44 INFO FileSourceScanExec: Planning scan with bin packing, max size: 55341818 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/27 17:42:44 INFO SparkContext: Starting job: head at DatasetUtils.scala:218
+25/10/27 17:42:44 INFO DAGScheduler: Got job 13 (head at DatasetUtils.scala:218) with 1 output partitions
+25/10/27 17:42:44 INFO DAGScheduler: Final stage: ResultStage 22 (head at DatasetUtils.scala:218)
+25/10/27 17:42:44 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:44 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:44 INFO DAGScheduler: Submitting ResultStage 22 (MapPartitionsRDD[61] at head at DatasetUtils.scala:218), which has no missing parents
+25/10/27 17:42:44 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 18.2 KiB, free 412.7 MiB)
+25/10/27 17:42:44 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 7.9 KiB, free 412.7 MiB)
+25/10/27 17:42:44 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 7.9 KiB, free: 413.6 MiB)
+25/10/27 17:42:44 INFO SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:44 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 22 (MapPartitionsRDD[61] at head at DatasetUtils.scala:218) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:44 INFO TaskSchedulerImpl: Adding task set 22.0 with 1 tasks resource profile 0
+25/10/27 17:42:44 INFO TaskSetManager: Starting task 0.0 in stage 22.0 (TID 16) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8598 bytes) 
+25/10/27 17:42:44 INFO Executor: Running task 0.0 in stage 22.0 (TID 16)
+25/10/27 17:42:44 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 0-14311938, partition values: [empty row]
+25/10/27 17:42:44 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:45 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 0-14288646, partition values: [empty row]
+25/10/27 17:42:45 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:45 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 0-14158322, partition values: [empty row]
+25/10/27 17:42:45 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:45 INFO BlockManagerInfo: Removed broadcast_17_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 6.3 KiB, free: 413.7 MiB)
+25/10/27 17:42:45 INFO Executor: Finished task 0.0 in stage 22.0 (TID 16). 494447 bytes result sent to driver
+25/10/27 17:42:45 INFO TaskSetManager: Finished task 0.0 in stage 22.0 (TID 16) in 1209 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:45 INFO TaskSchedulerImpl: Removed TaskSet 22.0, whose tasks have all completed, from pool 
+25/10/27 17:42:45 INFO DAGScheduler: ResultStage 22 (head at DatasetUtils.scala:218) finished in 1.219 s
+25/10/27 17:42:45 INFO DAGScheduler: Job 13 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:42:45 INFO TaskSchedulerImpl: Killing all running tasks in stage 22: Stage finished
+25/10/27 17:42:45 INFO DAGScheduler: Job 13 finished: head at DatasetUtils.scala:218, took 1.225472 s
+25/10/27 17:42:45 INFO DAGScheduler: Registering RDD 62 (head at DatasetUtils.scala:218) as input to shuffle 7
+25/10/27 17:42:45 INFO DAGScheduler: Got map stage job 14 (head at DatasetUtils.scala:218) with 1 output partitions
+25/10/27 17:42:45 INFO DAGScheduler: Final stage: ShuffleMapStage 23 (head at DatasetUtils.scala:218)
+25/10/27 17:42:45 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:45 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:45 INFO DAGScheduler: Submitting ShuffleMapStage 23 (MapPartitionsRDD[62] at head at DatasetUtils.scala:218), which has no missing parents
+25/10/27 17:42:45 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 29.7 KiB, free 412.7 MiB)
+25/10/27 17:42:45 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 10.7 KiB, free 412.6 MiB)
+25/10/27 17:42:45 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 10.7 KiB, free: 413.6 MiB)
+25/10/27 17:42:45 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:45 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 23 (MapPartitionsRDD[62] at head at DatasetUtils.scala:218) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:45 INFO TaskSchedulerImpl: Adding task set 23.0 with 1 tasks resource profile 0
+25/10/27 17:42:45 INFO TaskSetManager: Starting task 0.0 in stage 23.0 (TID 17) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8587 bytes) 
+25/10/27 17:42:45 INFO Executor: Running task 0.0 in stage 23.0 (TID 17)
+25/10/27 17:42:45 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 0-14311938, partition values: [empty row]
+25/10/27 17:42:45 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:46 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 0-14288646, partition values: [empty row]
+25/10/27 17:42:46 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:46 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 0-14158322, partition values: [empty row]
+25/10/27 17:42:46 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:46 INFO Executor: Finished task 0.0 in stage 23.0 (TID 17). 2260 bytes result sent to driver
+25/10/27 17:42:46 INFO TaskSetManager: Finished task 0.0 in stage 23.0 (TID 17) in 921 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:46 INFO TaskSchedulerImpl: Removed TaskSet 23.0, whose tasks have all completed, from pool 
+25/10/27 17:42:46 INFO DAGScheduler: ShuffleMapStage 23 (head at DatasetUtils.scala:218) finished in 0.931 s
+25/10/27 17:42:46 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:42:46 INFO DAGScheduler: running: Set()
+25/10/27 17:42:46 INFO DAGScheduler: waiting: Set()
+25/10/27 17:42:46 INFO DAGScheduler: failed: Set()
+25/10/27 17:42:46 INFO ShufflePartitionsUtil: For shuffle(7), advisory target size: 67108864, actual target size 6829868, minimum partition size: 1048576
+25/10/27 17:42:46 INFO CodeGenerator: Code generated in 32.436377 ms
+25/10/27 17:42:46 INFO BlockManagerInfo: Removed broadcast_21_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 10.7 KiB, free: 413.7 MiB)
+25/10/27 17:42:46 INFO CodeGenerator: Code generated in 36.656717 ms
+25/10/27 17:42:46 INFO SparkContext: Starting job: head at DatasetUtils.scala:218
+25/10/27 17:42:46 INFO DAGScheduler: Got job 15 (head at DatasetUtils.scala:218) with 1 output partitions
+25/10/27 17:42:46 INFO DAGScheduler: Final stage: ResultStage 25 (head at DatasetUtils.scala:218)
+25/10/27 17:42:46 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 24)
+25/10/27 17:42:46 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:46 INFO DAGScheduler: Submitting ResultStage 25 (MapPartitionsRDD[68] at head at DatasetUtils.scala:218), which has no missing parents
+25/10/27 17:42:47 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 40.8 KiB, free 412.6 MiB)
+25/10/27 17:42:47 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 19.2 KiB, free 412.6 MiB)
+25/10/27 17:42:47 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 19.2 KiB, free: 413.6 MiB)
+25/10/27 17:42:47 INFO SparkContext: Created broadcast 22 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:47 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 25 (MapPartitionsRDD[68] at head at DatasetUtils.scala:218) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:47 INFO TaskSchedulerImpl: Adding task set 25.0 with 1 tasks resource profile 0
+25/10/27 17:42:47 INFO TaskSetManager: Starting task 0.0 in stage 25.0 (TID 18) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+25/10/27 17:42:47 INFO Executor: Running task 0.0 in stage 25.0 (TID 18)
+25/10/27 17:42:47 INFO ShuffleBlockFetcherIterator: Getting 1 (6.5 MiB) non-empty blocks including 1 (6.5 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:42:47 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/10/27 17:42:47 INFO CodeGenerator: Code generated in 21.770212 ms
+25/10/27 17:42:47 INFO CodeGenerator: Code generated in 14.546905 ms
+25/10/27 17:42:47 INFO CodeGenerator: Code generated in 34.179621 ms
+25/10/27 17:42:47 INFO Executor: Finished task 0.0 in stage 25.0 (TID 18). 7415 bytes result sent to driver
+25/10/27 17:42:47 INFO TaskSetManager: Finished task 0.0 in stage 25.0 (TID 18) in 823 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:47 INFO TaskSchedulerImpl: Removed TaskSet 25.0, whose tasks have all completed, from pool 
+25/10/27 17:42:47 INFO DAGScheduler: ResultStage 25 (head at DatasetUtils.scala:218) finished in 0.835 s
+25/10/27 17:42:47 INFO DAGScheduler: Job 15 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:42:47 INFO TaskSchedulerImpl: Killing all running tasks in stage 25: Stage finished
+25/10/27 17:42:47 INFO DAGScheduler: Job 15 finished: head at DatasetUtils.scala:218, took 0.850116 s
+25/10/27 17:42:49 INFO CodeGenerator: Code generated in 46.952536 ms
+25/10/27 17:42:50 INFO FileSourceStrategy: Pushed Filters: 
+25/10/27 17:42:50 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/27 17:42:50 INFO FileSourceStrategy: Pushed Filters: 
+25/10/27 17:42:50 INFO FileSourceStrategy: Post-Scan Filters: 
+25/10/27 17:42:50 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 200.9 KiB, free 412.4 MiB)
+25/10/27 17:42:50 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 412.4 MiB)
+25/10/27 17:42:50 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 34.9 KiB, free: 413.6 MiB)
+25/10/27 17:42:50 INFO SparkContext: Created broadcast 23 from showString at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:50 INFO FileSourceScanExec: Planning scan with bin packing, max size: 55341818 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/27 17:42:50 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:50 INFO DAGScheduler: Got job 16 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:50 INFO DAGScheduler: Final stage: ResultStage 26 (showString at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:50 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:50 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:50 INFO DAGScheduler: Submitting ResultStage 26 (MapPartitionsRDD[74] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:50 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 18.2 KiB, free 412.4 MiB)
+25/10/27 17:42:50 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 7.8 KiB, free 412.4 MiB)
+25/10/27 17:42:50 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 7.8 KiB, free: 413.6 MiB)
+25/10/27 17:42:50 INFO SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:50 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 26 (MapPartitionsRDD[74] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:50 INFO TaskSchedulerImpl: Adding task set 26.0 with 1 tasks resource profile 0
+25/10/27 17:42:50 INFO TaskSetManager: Starting task 0.0 in stage 26.0 (TID 19) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8598 bytes) 
+25/10/27 17:42:50 INFO Executor: Running task 0.0 in stage 26.0 (TID 19)
+25/10/27 17:42:50 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 0-14311938, partition values: [empty row]
+25/10/27 17:42:50 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 0-14288646, partition values: [empty row]
+25/10/27 17:42:51 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 0-14158322, partition values: [empty row]
+25/10/27 17:42:51 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:51 INFO BlockManagerInfo: Removed broadcast_22_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 19.2 KiB, free: 413.6 MiB)
+25/10/27 17:42:51 INFO Executor: Finished task 0.0 in stage 26.0 (TID 19). 494447 bytes result sent to driver
+25/10/27 17:42:51 INFO TaskSetManager: Finished task 0.0 in stage 26.0 (TID 19) in 800 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:51 INFO TaskSchedulerImpl: Removed TaskSet 26.0, whose tasks have all completed, from pool 
+25/10/27 17:42:51 INFO DAGScheduler: ResultStage 26 (showString at NativeMethodAccessorImpl.java:0) finished in 0.809 s
+25/10/27 17:42:51 INFO DAGScheduler: Job 16 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:42:51 INFO TaskSchedulerImpl: Killing all running tasks in stage 26: Stage finished
+25/10/27 17:42:51 INFO DAGScheduler: Job 16 finished: showString at NativeMethodAccessorImpl.java:0, took 0.815463 s
+25/10/27 17:42:51 INFO DAGScheduler: Registering RDD 75 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 8
+25/10/27 17:42:51 INFO DAGScheduler: Got map stage job 17 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:51 INFO DAGScheduler: Final stage: ShuffleMapStage 27 (showString at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:51 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:51 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:51 INFO DAGScheduler: Submitting ShuffleMapStage 27 (MapPartitionsRDD[75] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:51 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 29.7 KiB, free 412.4 MiB)
+25/10/27 17:42:51 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 10.6 KiB, free 412.4 MiB)
+25/10/27 17:42:51 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 10.6 KiB, free: 413.6 MiB)
+25/10/27 17:42:51 INFO SparkContext: Created broadcast 25 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:51 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 27 (MapPartitionsRDD[75] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:51 INFO TaskSchedulerImpl: Adding task set 27.0 with 1 tasks resource profile 0
+25/10/27 17:42:51 INFO TaskSetManager: Starting task 0.0 in stage 27.0 (TID 20) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8587 bytes) 
+25/10/27 17:42:51 INFO Executor: Running task 0.0 in stage 27.0 (TID 20)
+25/10/27 17:42:51 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 200.9 KiB, free 412.2 MiB)
+25/10/27 17:42:51 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00000.gz.parquet, range: 0-14311938, partition values: [empty row]
+25/10/27 17:42:51 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 34.9 KiB, free 412.2 MiB)
+25/10/27 17:42:51 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 34.9 KiB, free: 413.6 MiB)
+25/10/27 17:42:51 INFO SparkContext: Created broadcast 26 from showString at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:51 INFO FileSourceScanExec: Planning scan with bin packing, max size: 52009922 bytes, open cost is considered as scanning 4194304 bytes.
+25/10/27 17:42:51 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:51 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+25/10/27 17:42:51 INFO DAGScheduler: Got job 18 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:51 INFO DAGScheduler: Final stage: ResultStage 28 (showString at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:51 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:51 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:51 INFO DAGScheduler: Submitting ResultStage 28 (MapPartitionsRDD[81] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:51 INFO MemoryStore: Block broadcast_27 stored as values in memory (estimated size 18.2 KiB, free 412.1 MiB)
+25/10/27 17:42:51 INFO MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 7.9 KiB, free 412.1 MiB)
+25/10/27 17:42:51 INFO BlockManagerInfo: Added broadcast_27_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 7.9 KiB, free: 413.6 MiB)
+25/10/27 17:42:51 INFO SparkContext: Created broadcast 27 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:51 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 28 (MapPartitionsRDD[81] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:51 INFO TaskSchedulerImpl: Adding task set 28.0 with 1 tasks resource profile 0
+25/10/27 17:42:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00001.gz.parquet, range: 0-14288646, partition values: [empty row]
+25/10/27 17:42:52 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/danio_protein.adam/part-r-00002.gz.parquet, range: 0-14158322, partition values: [empty row]
+25/10/27 17:42:52 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:52 INFO Executor: Finished task 0.0 in stage 27.0 (TID 20). 2303 bytes result sent to driver
+25/10/27 17:42:52 INFO TaskSetManager: Starting task 0.0 in stage 28.0 (TID 21) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8595 bytes) 
+25/10/27 17:42:52 INFO Executor: Running task 0.0 in stage 28.0 (TID 21)
+25/10/27 17:42:52 INFO TaskSetManager: Finished task 0.0 in stage 27.0 (TID 20) in 909 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:52 INFO TaskSchedulerImpl: Removed TaskSet 27.0, whose tasks have all completed, from pool 
+25/10/27 17:42:52 INFO DAGScheduler: ShuffleMapStage 27 (showString at NativeMethodAccessorImpl.java:0) finished in 0.919 s
+25/10/27 17:42:52 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:42:52 INFO DAGScheduler: running: Set(ResultStage 28)
+25/10/27 17:42:52 INFO DAGScheduler: waiting: Set()
+25/10/27 17:42:52 INFO DAGScheduler: failed: Set()
+25/10/27 17:42:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 0-13172102, partition values: [empty row]
+25/10/27 17:42:52 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:52 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 0-13149302, partition values: [empty row]
+25/10/27 17:42:52 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:53 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 0-13105606, partition values: [empty row]
+25/10/27 17:42:53 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:53 INFO Executor: Finished task 0.0 in stage 28.0 (TID 21). 490567 bytes result sent to driver
+25/10/27 17:42:53 INFO TaskSetManager: Finished task 0.0 in stage 28.0 (TID 21) in 705 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:53 INFO TaskSchedulerImpl: Removed TaskSet 28.0, whose tasks have all completed, from pool 
+25/10/27 17:42:53 INFO DAGScheduler: ResultStage 28 (showString at NativeMethodAccessorImpl.java:0) finished in 1.499 s
+25/10/27 17:42:53 INFO DAGScheduler: Job 18 is finished. Cancelling potential speculative or zombie tasks for this job
+25/10/27 17:42:53 INFO TaskSchedulerImpl: Killing all running tasks in stage 28: Stage finished
+25/10/27 17:42:53 INFO DAGScheduler: Job 18 finished: showString at NativeMethodAccessorImpl.java:0, took 1.505628 s
+25/10/27 17:42:53 INFO DAGScheduler: Registering RDD 82 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 9
+25/10/27 17:42:53 INFO DAGScheduler: Got map stage job 19 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:53 INFO DAGScheduler: Final stage: ShuffleMapStage 29 (showString at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:53 INFO DAGScheduler: Parents of final stage: List()
+25/10/27 17:42:53 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:53 INFO DAGScheduler: Submitting ShuffleMapStage 29 (MapPartitionsRDD[82] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:53 INFO MemoryStore: Block broadcast_28 stored as values in memory (estimated size 29.7 KiB, free 412.1 MiB)
+25/10/27 17:42:53 INFO MemoryStore: Block broadcast_28_piece0 stored as bytes in memory (estimated size 10.7 KiB, free 412.1 MiB)
+25/10/27 17:42:53 INFO BlockManagerInfo: Added broadcast_28_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 10.7 KiB, free: 413.5 MiB)
+25/10/27 17:42:53 INFO SparkContext: Created broadcast 28 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:53 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 29 (MapPartitionsRDD[82] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:53 INFO TaskSchedulerImpl: Adding task set 29.0 with 1 tasks resource profile 0
+25/10/27 17:42:53 INFO TaskSetManager: Starting task 0.0 in stage 29.0 (TID 22) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, PROCESS_LOCAL, 8584 bytes) 
+25/10/27 17:42:53 INFO Executor: Running task 0.0 in stage 29.0 (TID 22)
+25/10/27 17:42:53 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00002.gz.parquet, range: 0-13172102, partition values: [empty row]
+25/10/27 17:42:53 INFO ShufflePartitionsUtil: For shuffle(8), advisory target size: 67108864, actual target size 6829868, minimum partition size: 1048576
+25/10/27 17:42:53 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:53 INFO CodeGenerator: Code generated in 129.678075 ms
+25/10/27 17:42:53 INFO CodeGenerator: Code generated in 32.275481 ms
+25/10/27 17:42:53 INFO DAGScheduler: Registering RDD 88 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 10
+25/10/27 17:42:53 INFO DAGScheduler: Got map stage job 20 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:53 INFO DAGScheduler: Final stage: ShuffleMapStage 31 (showString at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:53 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 30)
+25/10/27 17:42:53 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:53 INFO DAGScheduler: Submitting ShuffleMapStage 31 (MapPartitionsRDD[88] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:53 INFO MemoryStore: Block broadcast_29 stored as values in memory (estimated size 65.9 KiB, free 412.0 MiB)
+25/10/27 17:42:53 INFO MemoryStore: Block broadcast_29_piece0 stored as bytes in memory (estimated size 27.4 KiB, free 412.0 MiB)
+25/10/27 17:42:53 INFO BlockManagerInfo: Added broadcast_29_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 27.4 KiB, free: 413.5 MiB)
+25/10/27 17:42:53 INFO SparkContext: Created broadcast 29 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:53 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 31 (MapPartitionsRDD[88] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:53 INFO TaskSchedulerImpl: Adding task set 31.0 with 1 tasks resource profile 0
+25/10/27 17:42:54 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00000.gz.parquet, range: 0-13149302, partition values: [empty row]
+25/10/27 17:42:54 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:54 INFO FileScanRDD: Reading File path: file:///lu/topola/home/lboro/omics-projekt-semestralny/data/mysz_protein.adam/part-r-00001.gz.parquet, range: 0-13105606, partition values: [empty row]
+25/10/27 17:42:54 INFO CodecPool: Got brand-new decompressor [.gz]
+25/10/27 17:42:54 INFO Executor: Finished task 0.0 in stage 29.0 (TID 22). 2303 bytes result sent to driver
+25/10/27 17:42:54 INFO TaskSetManager: Starting task 0.0 in stage 31.0 (TID 23) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7604 bytes) 
+25/10/27 17:42:54 INFO TaskSetManager: Finished task 0.0 in stage 29.0 (TID 22) in 1086 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:42:54 INFO TaskSchedulerImpl: Removed TaskSet 29.0, whose tasks have all completed, from pool 
+25/10/27 17:42:54 INFO Executor: Running task 0.0 in stage 31.0 (TID 23)
+25/10/27 17:42:54 INFO DAGScheduler: ShuffleMapStage 29 (showString at NativeMethodAccessorImpl.java:0) finished in 1.093 s
+25/10/27 17:42:54 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:42:54 INFO DAGScheduler: running: Set(ShuffleMapStage 31)
+25/10/27 17:42:54 INFO DAGScheduler: waiting: Set()
+25/10/27 17:42:54 INFO DAGScheduler: failed: Set()
+25/10/27 17:42:54 INFO ShufflePartitionsUtil: For shuffle(9), advisory target size: 67108864, actual target size 6158676, minimum partition size: 1048576
+25/10/27 17:42:54 INFO ShuffleBlockFetcherIterator: Getting 1 (6.5 MiB) non-empty blocks including 1 (6.5 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:42:54 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+25/10/27 17:42:54 INFO CodeGenerator: Code generated in 34.466762 ms
+25/10/27 17:42:54 INFO CodeGenerator: Code generated in 16.75255 ms
+25/10/27 17:42:54 INFO CodeGenerator: Code generated in 106.434379 ms
+25/10/27 17:42:54 INFO CodeGenerator: Code generated in 8.489983 ms
+25/10/27 17:42:54 INFO CodeGenerator: Code generated in 45.620812 ms
+25/10/27 17:42:54 INFO DAGScheduler: Registering RDD 94 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 11
+25/10/27 17:42:54 INFO DAGScheduler: Got map stage job 21 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+25/10/27 17:42:54 INFO DAGScheduler: Final stage: ShuffleMapStage 33 (showString at NativeMethodAccessorImpl.java:0)
+25/10/27 17:42:54 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 32)
+25/10/27 17:42:54 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:42:54 INFO DAGScheduler: Submitting ShuffleMapStage 33 (MapPartitionsRDD[94] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/10/27 17:42:54 INFO MemoryStore: Block broadcast_30 stored as values in memory (estimated size 66.0 KiB, free 379.7 MiB)
+25/10/27 17:42:54 INFO MemoryStore: Block broadcast_30_piece0 stored as bytes in memory (estimated size 27.4 KiB, free 379.7 MiB)
+25/10/27 17:42:54 INFO BlockManagerInfo: Added broadcast_30_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 27.4 KiB, free: 413.5 MiB)
+25/10/27 17:42:54 INFO SparkContext: Created broadcast 30 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:42:54 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 33 (MapPartitionsRDD[94] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:42:54 INFO TaskSchedulerImpl: Adding task set 33.0 with 1 tasks resource profile 0
+25/10/27 17:42:54 INFO CodeGenerator: Code generated in 123.509575 ms
+25/10/27 17:42:55 INFO CodeGenerator: Code generated in 12.258303 ms
+25/10/27 17:42:55 INFO CodeGenerator: Code generated in 53.220188 ms
+25/10/27 17:43:15 INFO Executor: Finished task 0.0 in stage 31.0 (TID 23). 5628 bytes result sent to driver
+25/10/27 17:43:15 INFO TaskSetManager: Starting task 0.0 in stage 33.0 (TID 24) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7604 bytes) 
+25/10/27 17:43:15 INFO Executor: Running task 0.0 in stage 33.0 (TID 24)
+25/10/27 17:43:15 INFO TaskSetManager: Finished task 0.0 in stage 31.0 (TID 23) in 21080 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:43:15 INFO TaskSchedulerImpl: Removed TaskSet 31.0, whose tasks have all completed, from pool 
+25/10/27 17:43:15 INFO DAGScheduler: ShuffleMapStage 31 (showString at NativeMethodAccessorImpl.java:0) finished in 21.703 s
+25/10/27 17:43:15 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:43:15 INFO DAGScheduler: running: Set(ShuffleMapStage 33)
+25/10/27 17:43:15 INFO DAGScheduler: waiting: Set()
+25/10/27 17:43:15 INFO DAGScheduler: failed: Set()
+25/10/27 17:43:15 INFO ShuffleBlockFetcherIterator: Getting 1 (5.9 MiB) non-empty blocks including 1 (5.9 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:43:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+25/10/27 17:43:15 INFO CodeGenerator: Code generated in 34.632522 ms
+25/10/27 17:43:15 INFO CodeGenerator: Code generated in 74.283186 ms
+25/10/27 17:43:32 INFO PythonUDFRunner: Times: total = 16751, boot = 17, init = 936, finish = 15798
+25/10/27 17:43:32 INFO Executor: Finished task 0.0 in stage 33.0 (TID 24). 5714 bytes result sent to driver
+25/10/27 17:43:32 INFO TaskSetManager: Finished task 0.0 in stage 33.0 (TID 24) in 16964 ms on t1-5.hpc.icm.edu.pl (executor driver) (1/1)
+25/10/27 17:43:32 INFO TaskSchedulerImpl: Removed TaskSet 33.0, whose tasks have all completed, from pool 
+25/10/27 17:43:32 INFO DAGScheduler: ShuffleMapStage 33 (showString at NativeMethodAccessorImpl.java:0) finished in 37.650 s
+25/10/27 17:43:32 INFO DAGScheduler: looking for newly runnable stages
+25/10/27 17:43:32 INFO DAGScheduler: running: Set()
+25/10/27 17:43:32 INFO DAGScheduler: waiting: Set()
+25/10/27 17:43:32 INFO DAGScheduler: failed: Set()
+25/10/27 17:43:32 INFO CodeGenerator: Code generated in 158.102015 ms
+25/10/27 17:43:32 INFO SparkContext: Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:317
+25/10/27 17:43:32 INFO DAGScheduler: Got job 22 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:317) with 1 output partitions
+25/10/27 17:43:32 INFO DAGScheduler: Final stage: ResultStage 36 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:317)
+25/10/27 17:43:32 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 35)
+25/10/27 17:43:32 INFO DAGScheduler: Missing parents: List()
+25/10/27 17:43:32 INFO DAGScheduler: Submitting ResultStage 36 (MapPartitionsRDD[97] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:317), which has no missing parents
+25/10/27 17:43:32 INFO MemoryStore: Block broadcast_31 stored as values in memory (estimated size 63.5 KiB, free 411.9 MiB)
+25/10/27 17:43:32 INFO MemoryStore: Block broadcast_31_piece0 stored as bytes in memory (estimated size 16.5 KiB, free 411.8 MiB)
+25/10/27 17:43:32 INFO BlockManagerInfo: Added broadcast_31_piece0 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 16.5 KiB, free: 413.5 MiB)
+25/10/27 17:43:32 INFO SparkContext: Created broadcast 31 from broadcast at DAGScheduler.scala:1580
+25/10/27 17:43:32 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 36 (MapPartitionsRDD[97] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:317) (first 15 tasks are for partitions Vector(0))
+25/10/27 17:43:32 INFO TaskSchedulerImpl: Adding task set 36.0 with 1 tasks resource profile 0
+25/10/27 17:43:32 INFO TaskSetManager: Starting task 0.0 in stage 36.0 (TID 25) (t1-5.hpc.icm.edu.pl, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+25/10/27 17:43:32 INFO Executor: Running task 0.0 in stage 36.0 (TID 25)
+25/10/27 17:43:32 INFO ShuffleBlockFetcherIterator: Getting 1 (76.8 MiB) non-empty blocks including 1 (76.8 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/10/27 17:43:32 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/10/27 17:43:33 INFO CodeGenerator: Code generated in 141.02157 ms
+25/10/27 17:43:35 INFO BlockManagerInfo: Removed broadcast_10_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 10.7 KiB, free: 413.5 MiB)
+25/10/27 17:43:36 INFO MemoryStore: Block taskresult_25 stored as bytes in memory (estimated size 304.4 MiB, free 107.5 MiB)
+25/10/27 17:43:36 INFO BlockManagerInfo: Added taskresult_25 in memory on t1-5.hpc.icm.edu.pl:33915 (size: 304.4 MiB, free: 109.1 MiB)
+25/10/27 17:43:36 INFO Executor: Finished task 0.0 in stage 36.0 (TID 25). 319186727 bytes result sent via BlockManager)
+25/10/27 17:43:36 INFO BlockManagerInfo: Removed broadcast_2_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 34.7 KiB, free: 109.1 MiB)
+25/10/27 17:43:36 INFO BlockManagerInfo: Removed broadcast_9_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 7.9 KiB, free: 109.1 MiB)
+25/10/27 17:43:36 INFO TransportClientFactory: Successfully created connection to t1-5.hpc.icm.edu.pl/10.5.101.5:33915 after 99 ms (0 ms spent in bootstraps)
+25/10/27 17:43:36 INFO BlockManagerInfo: Removed broadcast_25_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 10.6 KiB, free: 109.1 MiB)
+25/10/27 17:43:36 INFO BlockManagerInfo: Removed broadcast_27_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 7.9 KiB, free: 109.1 MiB)
+25/10/27 17:43:36 INFO BlockManagerInfo: Removed broadcast_16_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 13.3 KiB, free: 109.2 MiB)
+25/10/27 17:43:36 INFO BlockManagerInfo: Removed broadcast_20_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 7.9 KiB, free: 109.2 MiB)
+25/10/27 17:43:37 INFO BlockManagerInfo: Removed broadcast_28_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 10.7 KiB, free: 109.2 MiB)
+25/10/27 17:43:37 INFO BlockManagerInfo: Removed broadcast_15_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 17.5 KiB, free: 109.2 MiB)
+25/10/27 17:43:37 INFO BlockManagerInfo: Removed broadcast_29_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 27.4 KiB, free: 109.2 MiB)
+25/10/27 17:43:37 INFO BlockManagerInfo: Removed broadcast_19_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 34.9 KiB, free: 109.3 MiB)
+25/10/27 17:43:37 INFO BlockManagerInfo: Removed broadcast_14_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 17.5 KiB, free: 109.3 MiB)
+25/10/27 17:43:37 INFO BlockManagerInfo: Removed broadcast_30_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 27.4 KiB, free: 109.3 MiB)
+25/10/27 17:43:37 INFO BlockManagerInfo: Removed broadcast_12_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 7.8 KiB, free: 109.3 MiB)
+25/10/27 17:43:37 INFO BlockManagerInfo: Removed broadcast_24_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 7.8 KiB, free: 109.3 MiB)
+25/10/27 17:43:38 ERROR TaskResultGetter: Exception while getting task result
+java.lang.IllegalStateException: unread block data
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.setBlockDataMode(ObjectInputStream.java:3055)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1797)
+	at java.base/java.io.ObjectInputStream.readArray(ObjectInputStream.java:2186)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1750)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:540)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:498)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:87)
+	at org.apache.spark.serializer.SerializerHelper$.deserializeFromChunkedBuffer(SerializerHelper.scala:52)
+	at org.apache.spark.scheduler.DirectTaskResult.value(TaskResult.scala:108)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.$anonfun$run$1(TaskResultGetter.scala:102)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1928)
+	at org.apache.spark.scheduler.TaskResultGetter$$anon$3.run(TaskResultGetter.scala:63)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+25/10/27 17:43:38 INFO TaskSchedulerImpl: Removed TaskSet 36.0, whose tasks have all completed, from pool 
+25/10/27 17:43:38 INFO TaskSchedulerImpl: Cancelling stage 36
+25/10/27 17:43:38 INFO TaskSchedulerImpl: Killing all running tasks in stage 36: Stage cancelled: Job aborted due to stage failure: Exception while getting task result: java.lang.IllegalStateException: unread block data
+25/10/27 17:43:38 INFO DAGScheduler: ResultStage 36 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:317) failed in 6.043 s due to Job aborted due to stage failure: Exception while getting task result: java.lang.IllegalStateException: unread block data
+25/10/27 17:43:39 INFO DAGScheduler: Job 22 failed: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:317, took 6.145906 s
+25/10/27 17:43:39 INFO BlockManagerInfo: Removed broadcast_31_piece0 on t1-5.hpc.icm.edu.pl:33915 in memory (size: 16.5 KiB, free: 109.3 MiB)
+25/10/27 17:43:39 INFO SparkContext: Invoking stop() from shutdown hook
+25/10/27 17:43:39 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/10/27 17:43:39 INFO SparkUI: Stopped Spark web UI at http://t1-5.hpc.icm.edu.pl:4040
+25/10/27 17:43:39 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/10/27 17:43:39 INFO MemoryStore: MemoryStore cleared
+25/10/27 17:43:39 INFO BlockManager: BlockManager stopped
+25/10/27 17:43:39 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/10/27 17:43:39 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/10/27 17:43:39 INFO SparkContext: Successfully stopped SparkContext
+25/10/27 17:43:39 INFO ShutdownHookManager: Shutdown hook called
+25/10/27 17:43:39 INFO ShutdownHookManager: Deleting directory /tmp/spark-7eae9fc4-9a3a-40c0-8bf3-62f581c8a45f
+25/10/27 17:43:39 INFO ShutdownHookManager: Deleting directory /tmp/spark-90d64e15-c714-42e1-b802-1b3cf41f35c9/pyspark-5a889be3-a3b4-4ea2-8f63-1e812b47b487
+25/10/27 17:43:39 INFO ShutdownHookManager: Deleting directory /tmp/spark-90d64e15-c714-42e1-b802-1b3cf41f35c9
+Command exited with non-zero status 1
+	Command being timed: "spark-submit --executor-cores 1 minhash.py"
+	User time (seconds): 70.80
+	System time (seconds): 3.46
+	Percent of CPU this job got: 63%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1m 57.73s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5580624
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 792
+	Minor (reclaiming a frame) page faults: 354397
+	Voluntary context switches: 51852
+	Involuntary context switches: 46903
+	Swaps: 0
+	File system inputs: 161952
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+srun: error: t1-5: task 0: Exited with exit code 1

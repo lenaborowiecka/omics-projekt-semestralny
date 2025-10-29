@@ -92,14 +92,14 @@ step_start = time.time()
 # Każdy wektor jest binarny: 1 oznacza obecność danego trójpeptydu ze słownika, 0 nieobecność.
 # Reprezentacja rzadka jest efektywna pamięciowo.
 
+tripeptide_to_index_broadcast = spark.sparkContext.broadcast(tripeptide_to_index)
+
 def tripeptides_to_sparse_vector(tripeptide_list):
-    # Znajdujemy indeksy unikalnych trójpeptydów obecnych w sekwencji
-    indices = [tripeptide_to_index[t] for t in set(tripeptide_list) if t in tripeptide_to_index]
+    index_map = tripeptide_to_index_broadcast.value
+    indices = [index_map[t] for t in set(tripeptide_list) if t in index_map]
     indices.sort()
-    # Wartości są równe 1.0 (reprezentacja binarna)
     values = [1.0] * len(indices)
-    # Tworzymy Wektor Rzadki
-    return Vectors.sparse(vocab_size, indices, values)
+    return Vectors.sparse(len(index_map), indices, values)
 
 sparse_vector_udf = udf(tripeptides_to_sparse_vector, VectorUDT())
 

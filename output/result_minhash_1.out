@@ -1,18 +1,18 @@
 ==========================================
-SLURM_JOB_ID = 8398803
-SLURM_JOB_NODELIST = t1-11
+SLURM_JOB_ID = 8400421
+SLURM_JOB_NODELIST = t1-5
 ==========================================
 Całkowita liczba unikalnych trójpeptydów: 8174
 ********** 10 Najlepszych Przybliżonych Podobieństw Białek **********
 Traceback (most recent call last):
-  File "/lu/topola/home/lboro/omics-projekt-semestralny/minhash.py", line 169, in <module>
+  File "/lu/topola/home/lboro/omics-projekt-semestralny/minhash.py", line 155, in <module>
     approx_similarities.orderBy(F.asc("JaccardDistance")).show(10, truncate=False) # Sortowanie rosnąco po odległości (najmniejsza odległość -> największe podobieństwo)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 972, in show
   File "/usr/local/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
   File "/usr/local/lib/python3.12/site-packages/pyspark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 179, in deco
   File "/usr/local/lib/python3.12/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
-py4j.protocol.Py4JJavaError: An error occurred while calling o164.showString.
+py4j.protocol.Py4JJavaError: An error occurred while calling o176.showString.
 : org.apache.spark.SparkException: Job aborted due to stage failure: Exception while getting task result: java.lang.IllegalStateException: unread block data
 	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2844)
 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2780)

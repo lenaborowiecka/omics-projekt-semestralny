@@ -1,6 +1,6 @@
 ==========================================
-SLURM_JOB_ID = 8398804
-SLURM_JOB_NODELIST = t1-11
+SLURM_JOB_ID = 8400422
+SLURM_JOB_NODELIST = t1-14
 ==========================================
-Całkowita liczba unikalnych trójpeptydów: 8185
+Całkowita liczba unikalnych trójpeptydów: 8173
 ********** 10 Najlepszych Przybliżonych Podobieństw Białek **********
