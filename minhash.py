@@ -9,7 +9,7 @@ from utils.data_preparation import data_sampler
 import os
 import time
 import json
-utils.config import DESIRED_SAMPLE_SIZE
+from utils.config import DESIRED_SAMPLE_SIZE
 
 # --------------------------------------------------------
 # Inicjalizacja sesji Spark
