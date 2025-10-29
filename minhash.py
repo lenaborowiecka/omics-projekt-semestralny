@@ -9,7 +9,7 @@ from utils.data_preparation import data_sampler
 import os
 import time
 import json
-from config import DESIRED_SAMPLE_SIZE
+utils.config import DESIRED_SAMPLE_SIZE
 
 # --------------------------------------------------------
 # Inicjalizacja sesji Spark
@@ -149,6 +149,8 @@ approx_similarities = model.approxSimilarityJoin(
     col("JaccardDistance")
 )
 
+approx_similarities = approx_similarities.coalesce(1)
+
 print("********** 10 Najlepszych Przybliżonych Podobieństw Białek **********")
 # Sortujemy po odległości malejąco (im mniejsza odległość, tym większe podobieństwo, ale MinHash podaje odległość, więc malejąco jest ok dla odległości 0 do 1)
 # Uwaga: JaccardDistance = 1 - JaccardSimilarity. Niższa odległość to większe podobieństwo.
@@ -165,7 +167,7 @@ step_start = time.time()
 # co pozwala na dalszą analizę poza środowiskiem Spark.
 
 output_csv = f"output/protein_minhash_similarity_{DESIRED_SAMPLE_SIZE}.csv"
-approx_similarities.coalesce(1).write.mode("overwrite").option("header", "true").csv(output_csv)
+approx_similarities.write.mode("overwrite").option("header", "true").csv(output_csv)
 
 timing_log["krok_8_zapisanie_wynikow"] = round(time.time() - step_start, 2)
 

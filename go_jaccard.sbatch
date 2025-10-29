@@ -14,8 +14,10 @@
 mkdir -p output
 
 # Run inside Apptainer and save results
-srun install-dir/bin/apptainer exec --overlay overlay \
+srun -N 1 -n 1 -c $SLURM_CPUS_PER_TASK \
+  install-dir/bin/apptainer exec --overlay overlay \
   docker://quay.io/biocontainers/adam:1.0.1--hdfd78af_0 \
-  /usr/bin/time -v spark-submit --executor-cores $SLURM_CPUS_PER_TASK jaccard.py \
+  /usr/bin/time -v spark-submit \
+    --executor-cores $SLURM_CPUS_PER_TASK jaccard.py \
   > output/result_jaccard_${SLURM_CPUS_PER_TASK}.out
 

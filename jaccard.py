@@ -5,7 +5,7 @@ from pyspark.sql import functions as F
 from pyspark.sql.window import Window
 from utils.udfs import generate_tripeptides, compute_jaccard
 from utils.data_preparation import data_sampler
-from config import DESIRED_SAMPLE_SIZE
+from utils.config import DESIRED_SAMPLE_SIZE
 import os
 import time
 import json
@@ -117,7 +117,7 @@ step_start = time.time()
 # najlepsze dopasowanie w obrębie każdej grupy bez konieczności grupowania.
 
 # Definicja specyfikacji okna: partycjonuj po nazwie referencyjnej myszy i sortuj malejąco po podobieństwie
-window_spec = Window.partitionBy("mouse.referenceName").orderBy(F.desc("jaccard_similarity"))
+window_spec = Window.partitionBy("mouse.referenceName").orderBy(F.desc("jaccard_similarity"), F.asc("fish.referenceName"))
 
 # Rangowanie dopasowań i wybór tylko pierwszego (najlepszego)
 top_matches = similarities.withColumn("rank", F.row_number().over(window_spec)) \
@@ -127,6 +127,8 @@ top_matches = similarities.withColumn("rank", F.row_number().over(window_spec)) 
         F.col("fish.referenceName").alias("fish_ref"),
         "jaccard_similarity"
     )
+
+top_matches = top_matches.coalesce(1)
 
 print("********** 10 Najlepszych Dokładnych Dopasowań Białek Jaccarda **********")
 # Wyświetlenie 10 najlepszych unikalnych dopasowań, posortowanych malejąco
@@ -144,7 +146,7 @@ step_start = time.time()
 # co jest wygodne do dalszej analizy.
 
 output_csv = f"output/protein_jaccard_exact_matches_{DESIRED_SAMPLE_SIZE}.csv"
-top_matches.coalesce(1).orderBy(F.desc("jaccard_similarity")).write.csv(
+top_matches.orderBy(F.desc("jaccard_similarity")).write.csv(
     output_csv,
     header=True,
     mode="overwrite"
