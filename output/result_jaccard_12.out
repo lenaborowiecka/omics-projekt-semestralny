@@ -1,31 +1,31 @@
 ==========================================
-SLURM_JOB_ID = 8400419
-SLURM_JOB_NODELIST = t5-10
+SLURM_JOB_ID = 8417068
+SLURM_JOB_NODELIST = t11-16
 ==========================================
 ********** 10 Najlepszych Dokładnych Dopasowań Białek Jaccarda **********
 +--------------+--------------+------------------+
 |mouse_ref     |fish_ref      |jaccard_similarity|
 +--------------+--------------+------------------+
-|XP_002666951.1|NP_835512.1   |1.0               |
-|XP_068073671.1|NP_835512.1   |1.0               |
-|XP_009301181.3|NP_783583.1   |1.0               |
-|XP_073799541.1|NP_783583.1   |1.0               |
-|NP_957395.1   |NP_001357860.1|0.9172932330827067|
-|XP_073794228.1|XP_011246071.1|0.8848484848484849|
-|NP_998161.1   |NP_001357860.1|0.8823529411764706|
-|XP_073777158.1|XP_006534526.1|0.8817114093959731|
-|NP_958888.1   |NP_001123880.1|0.8763440860215054|
-|XP_068080740.1|XP_030097951.1|0.8687050359712231|
+|NP_001002152.1|XP_036018751.1|0.8316326530612245|
+|XP_073767657.1|XP_006527624.1|0.8023504273504274|
+|XP_017213113.1|XP_006527624.1|0.7903055848261328|
+|XP_021324015.1|XP_017170566.1|0.7838541666666666|
+|NP_001018465.1|NP_001399408.1|0.7799043062200957|
+|NP_001313524.1|NP_001407804.1|0.7749469214437368|
+|XP_068080740.1|XP_011239974.1|0.7661431064572426|
+|XP_073773477.1|NP_001136390.1|0.7601626016260162|
+|XP_005156473.1|XP_030097954.1|0.7477313974591652|
+|NP_001165871.1|XP_017170566.1|0.7447595561035758|
 +--------------+--------------+------------------+
 only showing top 10 rows
 
 **********************************************************
 Podsumowanie czasów wykonania:
-krok_1_wczytanie_i_probkowanie: 4.5 sekundy
+krok_1_wczytanie_i_probkowanie: 4.53 sekundy
 krok_2_ekstrakcja_sekwencji: 0.02 sekundy
 krok_3_generowanie_trojpeptydow: 0.06 sekundy
 krok_4_polaczenie_krzyzowe_i_filtrowanie: 0.05 sekundy
 krok_5_obliczenie_jaccarda: 0.17 sekundy
-krok_6_rangowanie_i_wybor: 2098.72 sekundy
-krok_7_zapisanie_wynikow: 2083.71 sekundy
-calkowity_czas_wykonania_sekundy: 4187.23 sekundy
+krok_6_rangowanie_i_wybor: 550.92 sekundy
+krok_7_zapisanie_wynikow: 543.37 sekundy
+calkowity_czas_wykonania_sekundy: 1099.12 sekundy

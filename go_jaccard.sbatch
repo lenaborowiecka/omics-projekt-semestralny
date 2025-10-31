@@ -2,7 +2,7 @@
 #SBATCH -J jaccard-benchmark
 #SBATCH -N 1
 #SBATCH -n 1
-#SBATCH -c 1
+#SBATCH -c 16
 #SBATCH --time=07:30:00
 #SBATCH -A g100-2238
 #SBATCH -p topola

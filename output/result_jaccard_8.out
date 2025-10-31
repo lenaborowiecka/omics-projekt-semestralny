@@ -1,31 +1,31 @@
 ==========================================
-SLURM_JOB_ID = 8400418
-SLURM_JOB_NODELIST = t1-4
+SLURM_JOB_ID = 8417067
+SLURM_JOB_NODELIST = t15-15
 ==========================================
 ********** 10 Najlepszych Dokładnych Dopasowań Białek Jaccarda **********
 +--------------+--------------+------------------+
 |mouse_ref     |fish_ref      |jaccard_similarity|
 +--------------+--------------+------------------+
-|XP_002666951.1|NP_835734.2   |1.0               |
-|XP_009301181.3|NP_783583.1   |1.0               |
 |XP_073799541.1|NP_783583.1   |1.0               |
-|NP_957037.1   |NP_035673.3   |0.9617834394904459|
-|NP_955815.1   |NP_033198.1   |0.8783783783783784|
 |XP_068080740.1|XP_006507398.1|0.8763440860215054|
-|NP_957395.1   |NP_835734.2   |0.875             |
-|XP_005156472.1|XP_006507398.1|0.8671454219030521|
-|NP_958889.1   |NP_033529.3   |0.8609271523178808|
-|NP_942104.2   |NP_033476.1   |0.8509719222462203|
+|NP_001346823.1|NP_067438.1   |0.8198198198198198|
+|XP_005163697.1|NP_109605.2   |0.8078358208955224|
+|XP_073788112.1|XP_017170566.1|0.7531172069825436|
+|NP_001165871.1|XP_017170566.1|0.7447595561035758|
+|XP_009297635.1|NP_032189.1   |0.7436974789915967|
+|XP_021324010.1|XP_017170566.1|0.7407862407862408|
+|NP_001007770.1|NP_032189.1   |0.7364016736401674|
+|XP_073773477.1|NP_001318074.1|0.735655737704918 |
 +--------------+--------------+------------------+
 only showing top 10 rows
 
 **********************************************************
 Podsumowanie czasów wykonania:
-krok_1_wczytanie_i_probkowanie: 5.07 sekundy
-krok_2_ekstrakcja_sekwencji: 0.03 sekundy
-krok_3_generowanie_trojpeptydow: 0.07 sekundy
-krok_4_polaczenie_krzyzowe_i_filtrowanie: 0.06 sekundy
-krok_5_obliczenie_jaccarda: 0.2 sekundy
-krok_6_rangowanie_i_wybor: 2094.43 sekundy
-krok_7_zapisanie_wynikow: 2067.05 sekundy
-calkowity_czas_wykonania_sekundy: 4166.91 sekundy
+krok_1_wczytanie_i_probkowanie: 4.0 sekundy
+krok_2_ekstrakcja_sekwencji: 0.02 sekundy
+krok_3_generowanie_trojpeptydow: 0.06 sekundy
+krok_4_polaczenie_krzyzowe_i_filtrowanie: 0.04 sekundy
+krok_5_obliczenie_jaccarda: 0.15 sekundy
+krok_6_rangowanie_i_wybor: 455.84 sekundy
+krok_7_zapisanie_wynikow: 449.18 sekundy
+calkowity_czas_wykonania_sekundy: 909.28 sekundy

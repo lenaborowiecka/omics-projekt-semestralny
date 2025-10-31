@@ -1,0 +1,11 @@
+{
+    "krok_1_wczytanie_i_probkowanie": 4.18,
+    "krok_2_ekstrakcja_sekwencji": 0.02,
+    "krok_3_generowanie_trojpeptydow": 0.04,
+    "krok_4_budowanie_slownika": 4.35,
+    "krok_5_konwersja_na_wektory": 0.05,
+    "krok_6_dopasowanie_minhash": 2.17,
+    "krok_7_przyblizone_laczenie_podobieństwa": 4.25,
+    "krok_8_zapisanie_wynikow": 3.3,
+    "calkowity_czas_wykonania_sekundy": 18.35
+}
